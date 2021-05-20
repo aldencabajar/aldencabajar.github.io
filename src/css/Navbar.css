@@ -1,0 +1,29 @@
+
+.Navbar {
+    text-align: center;
+    background-color: rgb(67, 78, 87);
+    display: flex;
+    color: white;
+    padding-left: 10%;
+    padding-top: 3%;
+}
+
+.navHeader {
+    align-items: center;
+}
+
+.navHeader:hover {
+    text-decoration: underline;
+}
+
+.nav-list {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    list-style: none;
+}
+
+.nav-list li:hover {
+    text-decoration: underline;
+}
