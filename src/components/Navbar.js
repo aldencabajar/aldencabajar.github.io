@@ -2,11 +2,24 @@ import '../css/Navbar.css';
 import '../App.css'
 import { Link } from 'react-router-dom';  
 
+const listLink=(name, lnk, style) => {
+    return(
+        <Link style={style} to={lnk}>
+            <li>{name}</li>
+        </Link>
+    )
+}
 function Navbar() {
     const navStyle = {
         color: 'white',
         textDecoration: 'inherit'
     }
+
+    const menuItems ={
+        About: '/about',
+        Contact: '/contact',
+        Projects: '/projects',
+    } 
     return (
         <div className="Navbar">
             <Link style={navStyle} to='/'>
@@ -15,13 +28,12 @@ function Navbar() {
             </header>
             </Link>
             <ul className="nav-list">
-                <Link style={navStyle} to='/about'>
-                    <li>About</li>
-                </Link>
-                <li>Contact</li>
-                <Link style={navStyle} to= '/projects'>
-                <li>Projects</li>
-                </Link>
+                {Object.entries(menuItems)
+                .map(([key, value]) => {
+                    return(
+                        listLink(key, value, navStyle)
+                    )
+                })}
             </ul>
         </div>
     )

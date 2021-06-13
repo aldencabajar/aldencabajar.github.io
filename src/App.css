@@ -2,10 +2,13 @@
   background-color: rgb(255, 255, 255);
   min-height: 100vh;
 }
+html, body {
+  margin: 0;
+  height: 100%;
+}
 
 .section-header {
   text-align: left;
-  padding-left: 10%;
   padding-top: 5px;
   color: rgb(39, 38, 38);
 }
@@ -18,16 +21,18 @@
   color:rgb(138, 138, 138);
   font-weight: normal;
   margin-top: 5px;
+  margin-bottom: 3%;
 }
 
-.section-text {
-  text-align: left;
-  padding-left: 10%;
-  font-size: calc(8px + 2vmin);
+.section-header p {
+  font-size: calc(20px + vmin);
+  margin-right: 25%;
+  text-align: justify;
 }
 
 .section-body {
-  padding-left: 10%;
+  padding-left: 20%;
+  padding-top: 25px;
 }
 
  
