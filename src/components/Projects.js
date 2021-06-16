@@ -1,6 +1,7 @@
 import "../App.css";
 import data from "../data/ProjectsData.json"
 import "../css/projects.css"
+import HoverImage from "./ProjectHover.js"
 
 
 const ProjectCell = (project) => {
@@ -15,8 +16,7 @@ const ProjectCell = (project) => {
                 </div>
 
                 {project.image !== "" &&
-                    <img src ={process.env.PUBLIC_URL + project.image} alt='tmp'/>
-                }
+                    <HoverImage image={project.image} />}
             </div>
 
         </>
