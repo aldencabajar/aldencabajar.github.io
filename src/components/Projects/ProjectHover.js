@@ -86,7 +86,8 @@ class HoverImage extends React.Component {
 
     render() {
         return(
-            <div className="img-container" onMouseOver={this.EventWhenHover} onMouseOut={this.EventOut}>
+            <div className="img-container" 
+            onMouseOver={this.EventWhenHover} onMouseOut={this.EventOut}>
                 <img src={this.img_link} 
                 ref={this.imageRef}
                 onLoad={this.GetDimensions}

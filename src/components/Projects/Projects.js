@@ -1,6 +1,5 @@
-import "../App.css";
-import data from "../data/ProjectsData.json"
-import "../css/projects.css"
+import data from "../../data/ProjectsData.json"
+import "../../css/projects.css"
 import HoverImage from "./ProjectHover.js"
 
 
