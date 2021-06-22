@@ -5,7 +5,7 @@
      "date": "2020-10-05",
      "image": "img/transformers.png", 
      "description": "Scraped the internet for suitable Cebuano language corpora. Planning to fit a transformer model to create a language model." , 
-     "gh_link": "",
+     "gh_link": "https://github.com/aldencabajar/cebuano-language-transformers",
      "post": ""
 
     },
@@ -16,7 +16,7 @@
      "date": "2020-10-05",
      "image": "img/cebu-traffic.jpg" ,
      "description": "Implemented an app using the YOLO V3 algorithm to detect cars from traffic data.", 
-     "gh_link": "",
+     "gh_link": "https://github.com/aldencabajar/traffic_flow_counter",
      "post": ""
 
     },
@@ -27,7 +27,7 @@
         "date": "2020-10-05",
         "image": "img/cord-19-wordcloud.png" ,
         "description": "Used the CORD-19 corpus to extract useful topics out of it. Used Non-negative Matrix Factorization.", 
-        "gh_link": "",
+        "gh_link": "https://github.com/aldencabajar/cord-19-topic-modeling",
         "post": ""
     }
     

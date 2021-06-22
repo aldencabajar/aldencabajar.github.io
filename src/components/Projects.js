@@ -14,9 +14,9 @@ const ProjectCell = (project) => {
                     <h5>{project.sub}</h5>
                     <p>{project.description}</p>
                 </div>
-
                 {project.image !== "" &&
-                    <HoverImage image={project.image} />}
+                    <HoverImage image={project.image} gh={project.gh_link} 
+                    blog_link={project.blog_link}/>}
             </div>
 
         </>
