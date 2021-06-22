@@ -36,15 +36,34 @@
 
 .proj-cell img {
     /* margin-top: -100px; */
-    max-width: 100px;
-    max-width:50%;
-    height: 250;
-    width: 250;
+    max-width:80%;
     }
+
+.overlay .ghlogo {
+    max-width:75px;
+    padding-right: 20px;
+
+}
+.overlay .blog {
+    max-width: 102px;
+    padding-left:20px;
+}
+
 
 @media screen and (max-width: 760px) {
     .proj-cell p {
         margin-right:25%;
+    }
+    .proj-cell img {
+        max-width:80%;
+    }
+    .overlay .ghlogo {
+        max-width: 50px;
+        padding-right:5px
+    }
+    .overlay .blog {
+        max-width: 67px;
+        padding-left:10px;
     }
 
 }
