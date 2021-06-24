@@ -1,6 +1,7 @@
 import data from "../../data/ProjectsData.json"
-import "../../css/projects.css"
-import HoverImage from "./ProjectHover.js"
+import HoverImage from "./ProjectHover"
+import Navigation from  "./ProjectNavigation"
+import '../../css/projects.css'
 
 
 const ProjectCell = (project) => {
@@ -22,16 +23,26 @@ const ProjectCell = (project) => {
     )
 } 
 
-function Projects() {
+const Projects=()=> {
     return (
         <div className="section-body">
             <header className ="section-header">
                 <h1> Projects </h1>
                 <h3>Been doing this and that.</h3>
             </header>
-            { data.map((project) => {
-                return(ProjectCell(project))
-            })}
+            <div className="project-container">
+                <div className="project-cell-container">
+                    { data.map((project) => {
+                        return(ProjectCell(project))
+                    })}
+                </div>
+                <div className="project-nav">
+                    <header>
+                        <h3>Contents</h3>
+                    </header>
+                    <Navigation ProjectData={data}/>
+                </div>
+            </div>
         </div>
 
     )

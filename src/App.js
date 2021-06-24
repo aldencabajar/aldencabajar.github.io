@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import About from './components/About';
-import Projects from './components/Projects';
+import Projects from './components/Projects/Projects';
 import Contact from './components/Contact';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {slide as Menu} from 'react-burger-menu'
@@ -9,7 +9,6 @@ import {slide as Menu} from 'react-burger-menu'
 function App() {
   const stylePageWrap = {
     height:"100%",
-    overflow:"hidden"
   }
   const styleOther ={height:"100%"}
   return (
