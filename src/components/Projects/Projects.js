@@ -14,19 +14,16 @@ class ProjectCell extends React.Component {
     }
     render() {
         return(
-            <>
-                <div className="proj-cell">
-                    <div className="body">
-                        <h3 ref={this.props.inputRef}>{this.project.title}</h3>
-                        <h5>{this.project.sub}</h5>
-                        <p>{this.project.description}</p>
-                    </div>
-                    {this.project.image !== "" &&
-                        <HoverImage image={this.project.image} gh={this.project.gh_link} 
-                        blog_link={this.project.blog_link}/>}
-                </div>
-
-            </>
+        <div className="proj-cell">
+            <div className="body">
+                <h3 ref={this.props.inputRef} id={this.project.id}>{this.project.title}</h3>
+                <h5>{this.project.sub}</h5>
+                <p>{this.project.description}</p>
+            </div>
+            {this.project.image !== "" &&
+                <HoverImage image={this.project.image} gh={this.project.gh_link} 
+                blog_link={this.project.blog_link}/>}
+        </div>
         )
 
     }
@@ -44,30 +41,30 @@ const Projects=()=>{
         SetOffset(top)
     }
 
-    const UpdateElemDims=(elements)=>{
+    const UpdateElemDims=(elements, yoffset)=>{
         SetDims(elements.map((elem)=>{
             const node = ReactDOM.findDOMNode(elem)
             const {top} = node.getBoundingClientRect()
-            return top
+            return (top + yoffset)
         }))
     }
 
     const resizeEventHandler=()=>{
         // const foo = ReactDOM.findDOMNode(h3elems.current[1])
         let elems = h3elems.current
-        UpdateElemDims(elems)
+        UpdateElemDims(elems, pageYOffset)
 
     } 
     useEffect(()=>{
         window.addEventListener("scroll", ScrollEventHandler)
         window.addEventListener("resize", resizeEventHandler)
         let elems = h3elems.current
-        UpdateElemDims(elems)
+        UpdateElemDims(elems, pageYOffset)
         return()=>{
             window.removeEventListener("Scroll", ScrollEventHandler)
             window.removeEventListener("resize", resizeEventHandler)
         }
-    }, [])
+    }, [pageYOffset])
 
     return (
         <div className="section-body">
