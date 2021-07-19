@@ -1,0 +1,53 @@
+.work-exp h3 {
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    text-align: center;
+    margin-right: 25%;
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.work-exp-cell {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 25%;
+    padding-bottom: 25px;
+}
+.work-exp-content {
+    width: 80%;
+}
+
+.work-exp-date {
+    width: 20%;
+    padding-top: 50px;
+    text-align: left;
+    font-size: 2.5vmin;
+}
+
+.work-exp-cell h3 {
+    text-align: left;
+    margin-right: 10%;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.work-exp-cell h1 {
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.work-exp-content .list li{
+    padding-bottom: 10px;
+
+}
+
+.accd-summary-proj {
+    font-weight: normal;
+
+}
+
+.accd-details-proj {
+    font-weight: lighter
+}
