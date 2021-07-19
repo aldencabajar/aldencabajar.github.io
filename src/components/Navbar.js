@@ -17,12 +17,12 @@ function Navbar() {
 
     const menuItems ={
         About: '/about',
-        Contact: '/contact',
         Projects: '/projects',
+        Resume: '/resume'
     } 
     return (
         <div className="Navbar">
-            <Link style={navStyle} to='/'>
+            <Link style={navStyle} to='/about'>
             <header className="navHeader">
                 <h1>Alden Cabajar</h1>
             </header>

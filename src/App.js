@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import About from './components/About';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact';
+import Resume from './components/Resume/Resume'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {slide as Menu} from 'react-burger-menu'
 
@@ -18,6 +19,8 @@ function App() {
             <a id="home"  href="/">Home</a>
             <a id="about"  href="/about">About</a>
             <a id="contact" href="/contact">Contact</a>
+            <a id="project"  href="/projects">Projects</a>
+            <a id="resume"  href="/resume">Resume</a>
         </Menu>
         <div id="page-wrap" style={stylePageWrap}>
             <Navbar/>
@@ -26,6 +29,7 @@ function App() {
               <Route path = "/about" component={About}/>
               <Route path = "/projects" component={Projects}/>
               <Route path = "/contact" component={Contact}/>
+              <Route path = "/resume" component={Resume}/>
             </Switch>
         </div>
       </div>
