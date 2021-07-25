@@ -6,11 +6,16 @@ import Contact from './components/Contact';
 import Resume from './components/Resume/Resume'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {slide as Menu} from 'react-burger-menu'
+import { useEffect } from 'react';
 
-function App() {
+const App=()=>{
   const stylePageWrap = {
     height:"100%",
   }
+  useEffect(()=>{
+    document.title = "Alden Cabajar"
+
+  },[])
   const styleOther ={height:"100%"}
   return (
     <Router>
