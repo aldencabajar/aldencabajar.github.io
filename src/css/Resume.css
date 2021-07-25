@@ -54,8 +54,10 @@
 
 .skill-group {
     /* height: 500px  */
-    width:100%;
+    width:100%; 
+    overflow: hidden;
 }
+
 
 /* Styling for Skills */
 .skill-group-container {
@@ -64,7 +66,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding-bottom: 25px;
+    overflow: hidden;
 }
 .skill-group-container > div {
-    flex:50%;
+    flex:50%; 
 }
