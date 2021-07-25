@@ -1,4 +1,4 @@
-.work-exp h3 {
+.resume-header h3 {
     color: rgb(0, 0, 0);
     font-weight: normal;
     text-align: center;
@@ -50,4 +50,21 @@
 
 .accd-details-proj {
     font-weight: lighter
+}
+
+.skill-group {
+    /* height: 500px  */
+    width:100%;
+}
+
+/* Styling for Skills */
+.skill-group-container {
+    display: flex;
+    margin-right: 25%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+.skill-group-container > div {
+    flex:50%;
 }

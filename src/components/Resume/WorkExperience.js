@@ -49,7 +49,9 @@ class WorkExperience extends React.Component {
     render() {
         return(
             <div className="work-exp">
-                <h3>Work Experience</h3>
+                <header className="resume-header">
+                    <h3>Work Experience</h3>
+                </header>
                 {this.UnravelData(this.data)}
             </div>
         )

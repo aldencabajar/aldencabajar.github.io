@@ -1,0 +1,38 @@
+[
+    {
+        "group": "Statistics",
+        "skills": {
+            "Hypothesis Testing": 4,
+            "Generalized Linear Models": 4,
+            "Bayesian Analysis": 3,
+            "Experimental Design": 3,
+            "Time Series Analysis": 2
+
+        }
+    },
+    {
+        "group": "Machine Learning",
+        "skills": {
+            "Deep learning": 4,
+            "Pytorch": 3,
+            "Tensorflow": 3,
+            "Natural Language Processing": 4,
+            "Computer Vision": 2,
+            "Unsupervised Learning": 3
+        }
+    },
+    {
+        "group": "Programming",
+        "skills": {
+            "R": 5,
+            "Python": 4,
+            "SQL": 5,
+            "HTML": 3,
+            "CSS": 2,
+            "JavaScript": 2,
+            "React JS": 3,
+            "Visual Basic": 3
+        }
+    }
+
+]

@@ -2,6 +2,7 @@ import React from "react";
 import "../../css/Resume.css"
 import WorkExpData from "../../data/WorkExperience.json"
 import WorkExperience from "./WorkExperience";
+import Skills from "./Skills";
 
 
 const Resume=()=>{
@@ -12,6 +13,7 @@ const Resume=()=>{
                 <h3>My current professional experience.</h3>
             </header>
             <WorkExperience data={WorkExpData}/>
+            <Skills />
 
         </div>
     )
