@@ -21,8 +21,8 @@ class WorkExperience extends React.Component {
             <div className="work-exp-cell">
                 <div className="work-exp-content">
                     <header>
-                        <h1>{doc.job_title}</h1>
-                        <h3>{doc.description}</h3>
+                        <h3>{doc.job_title}</h3>
+                        <h4>{doc.description}</h4>
                     </header>
                     <ul className="work-exp-content list">
                         {doc.projects.map((proj, i)=>{
@@ -49,9 +49,9 @@ class WorkExperience extends React.Component {
     render() {
         return(
             <div className="work-exp">
-                <header className="resume-header">
+                <div className="resume-header">
                     <h3>Work Experience</h3>
-                </header>
+                </div>
                 {this.UnravelData(this.data)}
             </div>
         )

@@ -21,6 +21,18 @@ const SkillBarGroup=(props)=>{
     const options={
         indexAxis: "y",
         responsive: true,
+        plugins:{
+            legend: {
+                display: false
+            },
+        },
+       scales:{
+           x: {
+              min: 0,
+              max: 5,
+            }
+        }
+
     }
     const kv = Object.entries(props.skillSet)
     const data={
@@ -35,12 +47,11 @@ const SkillBarGroup=(props)=>{
             },
         ]
     }
-    console.log(data)
 
     return(
         <div className="skill-group" id={props.groupName}>
             <h4>{props.groupName}</h4>
-            <Bar data={data} options={options}/>
+            <Bar data={data} options={options} />
         </div>
     )
 
@@ -48,22 +59,52 @@ const SkillBarGroup=(props)=>{
 
 
 class Skills extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            inView: false,
+            // reDraw: false
+
+        }
+    }
+    isComponentInView=()=>{
+        const elem = document.querySelector("#skills-display")
+        var docViewTop = window.pageYOffset || document.documentElement.scrollTop
+        var docViewBottom = docViewTop + window.innerHeight;
+    
+        const {top, height} = elem.getBoundingClientRect()
+        var elemTop = top + docViewTop
+        var elemBottom = elemTop + height;
+        var inView = (elemTop <= docViewBottom) && (elemBottom >= docViewTop)
+        if (!this.state.inView && inView) {
+            this.setState({inView: inView})
+        } 
+        else if (this.state.inView && !inView) {
+            this.setState({inView : inView})
+        } 
+
+    }
 
     componentDidMount() {
-
+        this.isComponentInView()
+        window.addEventListener("scroll", this.isComponentInView)
+    }
+    componentWillUnmount(){
+        window.removeEventListener("scroll", this.isComponentInView)
     }
 
     render() {
         return(
-            <div className="skills-display">
-                <header className="resume-header">
+            <div id="skills-display">
+                <div className="resume-header">
                     <h3>Professional Skills</h3>
-                </header>
+                </div>
                 <div className ="skill-group-container">
                     {SkillsData.map(
                         (items, el)=>{return(
                         <SkillBarGroup groupName={items.group} 
-                        skillSet={items.skills} Color={PuORRGBA[el]}/>
+                        skillSet={items.skills} Color={PuORRGBA[el]}
+                       />
                         )}
                     )}
                     {/* add a dummy container to make it equal rows and cols */}
