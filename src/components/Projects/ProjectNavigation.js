@@ -1,5 +1,5 @@
 import React from "react";
-import {HashLink as Link } from "react-router-hash-link";
+import {HashLink} from "react-router-hash-link";
 
 class Navigation extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class Navigation extends React.Component {
     }
     UpdateStyles=(props)=>{
         var index
-        const margin = 150
+        const margin = 175 
         const lastIndex = props.cellOffset.length - 1
         if (props.pageYOffset >= (props.cellOffset[lastIndex] - margin)) {
             index = lastIndex 
@@ -56,10 +56,10 @@ class Navigation extends React.Component {
         <ul>
             {this.ProjectData.map((project, i)=>{
                 return(
-                    <Link to={"/projects#" + project.id} 
+                    <HashLink to={"/projects#" + project.id} 
                     style={this.state.listItemStyles[i]}>
                         <li>{project.title}</li>
-                    </Link>
+                    </HashLink>
                 )
             })}
         </ul>

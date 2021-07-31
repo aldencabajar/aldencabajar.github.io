@@ -15,14 +15,15 @@ class ProjectCell extends React.Component {
     render() {
         return(
         <div className="proj-cell">
+            <span id={this.project.id}> &nbsp; </span>
             <div className="body">
-                <h3 ref={this.props.inputRef} id={this.project.id}>{this.project.title}</h3>
+                <h3 ref={this.props.inputRef}>{this.project.title}</h3>
                 <h5>{this.project.sub}</h5>
                 <p>{this.project.description}</p>
-            </div>
             {this.project.image !== "" &&
                 <HoverImage image={this.project.image} gh={this.project.gh_link} 
                 blog_link={this.project.blog_link}/>}
+            </div>
         </div>
         )
 
