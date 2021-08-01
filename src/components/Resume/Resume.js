@@ -3,6 +3,7 @@ import "../../css/Resume.css"
 import WorkExpData from "../../data/WorkExperience.json"
 import WorkExperience from "./WorkExperience";
 import Skills from "./Skills";
+import Publications from "./Publications";
 
 
 const Resume=()=>{
@@ -14,6 +15,7 @@ const Resume=()=>{
             </header>
             <WorkExperience data={WorkExpData}/>
             <Skills />
+            <Publications />
 
         </div>
     )
