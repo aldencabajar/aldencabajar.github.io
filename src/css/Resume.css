@@ -1,3 +1,8 @@
+/*General styling for resume page*/
+.resume-content {
+    margin-right: 25%;
+}
+
 .resume-header {
     position: sticky;
     top: 100px;
@@ -16,7 +21,6 @@
 .work-exp-cell { 
     display: flex;
     justify-content: space-around;
-    margin-right: 25%;
     padding-bottom: 25px;
 }
 .work-exp-content {
@@ -69,7 +73,6 @@
 /* Styling for Skills */
 .skill-group-container {
     display: flex;
-    margin-right: 25%;
     flex-direction: row;
     flex-wrap: wrap;
     padding-bottom: 25px;
@@ -77,4 +80,9 @@
 }
 .skill-group-container > div {
     flex:50%; 
+}
+
+/* Styling for publications*/
+#publications li {
+    padding-bottom: 10px;
 }

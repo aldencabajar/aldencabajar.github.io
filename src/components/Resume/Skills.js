@@ -95,7 +95,7 @@ class Skills extends React.Component {
 
     render() {
         return(
-            <div id="skills-display">
+            <div className="resume-content" id="skills-display">
                 <div className="resume-header">
                     <h3>Professional Skills</h3>
                 </div>
