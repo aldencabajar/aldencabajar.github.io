@@ -9,8 +9,8 @@ const APAStyleBib=(PubData)=>{
         <div>
             <span style={{fontWeight:"lighter"}}> {PubData.authors.join(", ")} </span>
             <span style={{fontWeight:"normal"}}> {PubData.title + "."} </span>
-            <span style={{fontStyle:"italic"}}>{PubData.journal + ", "}</span>
-            <span style={{fontStyle:"italic"}}>
+            <span style={{fontStyle:"italic", fontWeight:"lighter"}}>
+                <span>{PubData.journal + ", "}</span>
                 {PubData.vol
                 + (PubData.issue == null ? "" : " ("+ PubData.issue + ")")
                 + (PubData.pages == null ? "" : "," + PubData.pages)

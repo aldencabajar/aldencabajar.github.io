@@ -30,8 +30,19 @@
             "HTML": 3,
             "CSS": 2,
             "JavaScript": 2,
-            "React JS": 3,
+            "React JS": 2,
             "Visual Basic": 3
+        }
+    }, 
+    {
+        "group": "Other tech skills",
+        "skills": {
+            "Git": 5,
+            "Vim": 4,
+            "Linux": 3,
+            "Bash": 2,
+            "Docker": 2,
+            "Spark": 2
         }
     }
 
