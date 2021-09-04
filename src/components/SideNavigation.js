@@ -1,3 +1,4 @@
+
 import React from "react";
 import {HashLink} from "react-router-hash-link";
 
@@ -7,7 +8,8 @@ class Navigation extends React.Component {
         this.state = {
             listItemStyles :[],
         }
-        this.ProjectData = props.ProjectData
+        this.data = props.data
+        this.route = props.route
     }
     UpdateStyles=(props)=>{
         var index
@@ -54,11 +56,11 @@ class Navigation extends React.Component {
     render() {
         return(
         <ul>
-            {this.ProjectData.map((project, i)=>{
+            {this.data.map((item, i)=>{
                 return(
-                    <HashLink to={"/projects#" + project.id} 
+                    <HashLink to={this.route + "#" + item.id} 
                     style={this.state.listItemStyles[i]}>
-                        <li>{project.title}</li>
+                        <li>{item.title}</li>
                     </HashLink>
                 )
             })}

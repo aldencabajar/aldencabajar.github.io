@@ -1,6 +1,6 @@
 import data from "../../data/ProjectsData.json"
 import HoverImage from "./ProjectHover"
-import Navigation from  "./ProjectNavigation"
+import Navigation from  "../SideNavigation"
 import React, {useRef, useEffect, useState} from "react";
 import ReactDOM from 'react-dom';
 import '../../css/projects.css'
@@ -50,17 +50,17 @@ const Projects=()=>{
         }))
     }
 
-    const resizeEventHandler=()=>{
-        // const foo = ReactDOM.findDOMNode(h3elems.current[1])
+    useEffect(()=>{
         let elems = h3elems.current
         UpdateElemDims(elems, pageYOffset)
+        const resizeEventHandler=()=>{
+            // const foo = ReactDOM.findDOMNode(h3elems.current[1])
+            let elems = h3elems.current
+            UpdateElemDims(elems, pageYOffset)
 
-    } 
-    useEffect(()=>{
+        } 
         window.addEventListener("scroll", ScrollEventHandler)
         window.addEventListener("resize", resizeEventHandler)
-        let elems = h3elems.current
-        UpdateElemDims(elems, pageYOffset)
         return()=>{
             window.removeEventListener("Scroll", ScrollEventHandler)
             window.removeEventListener("resize", resizeEventHandler)
@@ -85,13 +85,14 @@ const Projects=()=>{
                         )
                     })}
                 </div>
-                <div className="project-nav">
+                <div className="side-nav">
                     <header>
                         <h3>Contents</h3>
                     </header>
-                    <Navigation ProjectData={data}
+                    <Navigation data={data}
                     cellOffset={Dims}
                     pageYOffset={pageYOffset}
+                    route={"/projects"}
                     />
                 </div>
             </div>

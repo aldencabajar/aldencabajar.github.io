@@ -1,6 +1,7 @@
 import React from "react";
 import SkillsData from "../../data/Skills.json";
 import { Bar } from "react-chartjs-2";
+import ResumeBase from "./ResumeBase";
 
 
 const PuOrRGBRaw =[
@@ -58,14 +59,10 @@ const SkillBarGroup=(props)=>{
 }
 
 
-class Skills extends React.Component {
+class Skills extends ResumeBase {
     constructor(props){
         super(props)
-        this.state = {
-            inView: false,
-            // reDraw: false
-
-        }
+        this.state = {inView: false}
     }
     isComponentInView=()=>{
         const elem = document.querySelector("#skills-display")
@@ -73,29 +70,33 @@ class Skills extends React.Component {
         var docViewBottom = docViewTop + window.innerHeight;
     
         const {top, height} = elem.getBoundingClientRect()
-        var elemTop = top + docViewTop
-        var elemBottom = elemTop + height;
+        // the 200 value depends on the height of NavBar and paddings, padding bottom for
+        // Skills component
+        var elemTop = top + docViewTop + 200 
+        var elemBottom = elemTop + height
         var inView = (elemTop <= docViewBottom) && (elemBottom >= docViewTop)
-        if (!this.state.inView && inView) {
-            this.setState({inView: inView})
-        } 
-        else if (this.state.inView && !inView) {
-            this.setState({inView : inView})
-        } 
+        this.setState({inView : inView})
+
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+        return(nextState.inView && (nextState.inView !== this.state.inView))
 
     }
 
     componentDidMount() {
+        super.componentDidMount()
         this.isComponentInView()
         window.addEventListener("scroll", this.isComponentInView)
     }
     componentWillUnmount(){
+        super.componentWillUnmount()
         window.removeEventListener("scroll", this.isComponentInView)
     }
 
     render() {
         return(
-            <div className="resume-content" id="skills-display">
+            <div className="resume-content" ref={this.divRef}>
+                <span className="resume-content resume-content-span" id='skills-display'></span>
                 <div className="resume-header">
                     <h3>Professional Skills</h3>
                 </div>

@@ -1,13 +1,11 @@
 import React from "react";
-import ProjectsDesc from "./ProjectsDesc.js"
+import ProjectsDesc from "./ProjectsDesc.js";
+import ResumeBase from "./ResumeBase";
 
-class WorkExperience extends React.Component {
+class WorkExperience extends ResumeBase {
     constructor(props){
         super(props)
         this.data = this.props.data
-    }
-    componentDidMount() {
-        console.log(this.DerivePrefixId(this.data[0].job_title, 0))
     }
 
     DerivePrefixId=(stri, num)=>{
@@ -22,6 +20,7 @@ class WorkExperience extends React.Component {
                 <div className="work-exp-content">
                     <header>
                         <h3>{doc.job_title}</h3>
+                        <p style={{'fontWeight': 'lighter'}}>{doc.company}</p>
                         <h4>{doc.description}</h4>
                     </header>
                     <ul className="work-exp-content list">
@@ -48,7 +47,8 @@ class WorkExperience extends React.Component {
 
     render() {
         return(
-            <div className="resume-content">
+            <div className="resume-content" ref={this.divRef}>
+                <span className="resume-content resume-content-span" id='workExperience'>&nbsp;</span>
                 <div className="resume-header">
                     <h3>Work Experience</h3>
                 </div>
