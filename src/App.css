@@ -21,7 +21,7 @@
 }
 
 .section-header p {
-  font-size: calc(20px + vmin);
+  font-size: 20px;
   margin-right: 25%;
   text-align: justify;
 }
