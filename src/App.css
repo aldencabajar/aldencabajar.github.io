@@ -31,6 +31,38 @@
   padding-top: 25px;
   margin-bottom: 150px;
 }
+.home {
+  margin-right: 20%;
+  margin-top: 5%; 
+}
+.channels {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.side-nav {
+    margin-right: 10%;
+    padding-top:25px;
+    position: sticky;
+    top: 100px; 
+    /* border-style: none none none solid; */
+}
+
+.side-nav li{
+    margin: 20px 0;
+    list-style: none;
+    font-size: 18px;
+    color: rgb(39, 39, 39);
+
+}
+
+.side-nav h3{
+    margin-left: 20px;
+    font-weight: normal;    
+    font-size: 25px;
+    color:rgb(109, 108, 108);    
+}
 
  
 /* .App-logo {

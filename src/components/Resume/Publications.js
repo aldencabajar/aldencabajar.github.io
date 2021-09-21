@@ -1,6 +1,7 @@
 import PublicationData from "../../data/PublicationData.json"
 import InsertLinkIcon from '@material-ui/icons/InsertLink';
 import Link from '@material-ui/core/Link'
+import ResumeBase from "./ResumeBase";
 
 
 const APAStyleBib=(PubData)=>{
@@ -34,21 +35,21 @@ const APAStyleBib=(PubData)=>{
 
 } 
 
-const Publications=()=>{
-    // console.log(APAStyleBib(PublicationData[2]))
-    return(
-        <div className="resume-content" id="publications">
-            <div className="resume-header">
-                <h3>Publications</h3>
+export default class Publications extends ResumeBase {
+    render() {
+        return(
+            <div className="resume-content"  ref={this.divRef}>
+                <span className="resume-content resume-content-span" id='publications'> &nbsp; </span>
+                <div className="resume-header">
+                    <h3>Publications</h3>
+                </div>
+                <ul style={{listStyle:"none"}}>
+                    {PublicationData.map((data)=>{
+                        return(<li>{APAStyleBib(data)}</li>)
+                    })}
+                </ul>
             </div>
-            <ul style={{listStyle:"none"}}>
-                {PublicationData.map((data)=>{
-                    return(<li>{APAStyleBib(data)}</li>)
-                })}
-            </ul>
-        </div>
-    )
+        )
 
+    }
 }
-
-export default Publications

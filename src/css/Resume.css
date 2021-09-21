@@ -1,6 +1,24 @@
 /*General styling for resume page*/
+#resume-all {
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 270px;
+
+}
+.side-nav-resume {
+    padding-top: 50px;
+    padding-right: 50px;
+    width: 500px; 
+}
+.resume-content-span {
+    margin-top: -50px;
+    padding-bottom: 50px;
+    display: block;
+}
+
 .resume-content {
-    margin-right: 25%;
+    padding-right: 50px;
 }
 
 .resume-header {
@@ -75,8 +93,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 25px;
     overflow: hidden;
+    margin-bottom:0px;
 }
 .skill-group-container > div {
     flex:50%; 

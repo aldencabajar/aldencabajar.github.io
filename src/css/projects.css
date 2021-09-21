@@ -2,36 +2,12 @@
 .project-container {
     display:flex;
     justify-content: space-around;
-    margin-right: 15%;
     align-items: flex-start;
     margin-bottom: 200px;
 
 }
 
 
-.project-nav {
-    margin-right: 10%;
-    padding-top:25px;
-    font-size: 2vmin;
-    position: sticky;
-    top: 100px; 
-    /* border-style: none none none solid; */
-}
-
-.project-nav li{
-    margin: 20px 0;
-    list-style: none;
-    font-size: 17px;
-    color: rgb(39, 39, 39);
-
-}
-
-.project-nav h3{
-    margin-left: 20px;
-    font-weight: normal;    
-    font-size: 25px;
-    color:rgb(20, 20, 20);    
-}
 
 .proj-cell .body {
     margin-bottom: 5%;
