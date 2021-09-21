@@ -16,13 +16,13 @@ function Navbar() {
     }
 
     const menuItems ={
-        About: '/about',
+        Home: '/',
         Projects: '/projects',
         Resume: '/resume'
     } 
     return (
         <div className="Navbar">
-            <Link style={navStyle} to='/about'>
+            <Link style={navStyle} to='/'>
             <header className="navHeader">
                 <h1>Alden Cabajar</h1>
             </header>

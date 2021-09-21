@@ -31,6 +31,16 @@
   padding-top: 25px;
   margin-bottom: 150px;
 }
+.home {
+  margin-right: 20%;
+  margin-top: 5%; 
+}
+.channels {
+  display: flex;
+  flex-direction: row;
+}
+
+
 .side-nav {
     margin-right: 10%;
     padding-top:25px;

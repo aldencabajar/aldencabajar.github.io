@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import About from './components/About';
+import Home from './components/Home';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact';
 import Resume from './components/Resume/Resume'
@@ -39,17 +40,5 @@ const App=()=>{
     </Router>
   );
 }
+export default App
 
-const Home=() => {
-  return (
-    <div className='section-body'>
-      <header className='section-header'> 
-        <h1>Home</h1>
-        <h3> Hello. Welcome to my page. </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-      </header>
-    </div>
-  )
-}
-
-export default App;
