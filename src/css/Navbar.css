@@ -41,7 +41,7 @@ display: inline-block;
 
 .Navbar {
     text-align: center;
-    background-color: rgb(67, 78, 87);
+    background-color: rgb(69, 143, 212);
     display: flex;
     color: white;
     padding-left: 10%;
@@ -82,10 +82,3 @@ display: inline-block;
     font-weight: bold;
 }
 
-
-@media screen and (max-width: 850px) {
-    .nav-list {
-        display: none
-    }
-    
-}
