@@ -65,8 +65,8 @@
     /* font-size: 25px; */
 }
 
-.work-exp-content-list li{
-    padding-bottom: 10px;
+.work-exp-content .list li{
+    padding-bottom: 15px;
     font-size: 15px;
 
 }
