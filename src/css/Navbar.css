@@ -82,3 +82,9 @@ display: inline-block;
     font-weight: bold;
 }
 
+@media screen and (max-width: 850px) {
+    .nav-list {
+        display: none
+    }
+    
+}
