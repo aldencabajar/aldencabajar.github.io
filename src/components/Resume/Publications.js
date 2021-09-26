@@ -38,8 +38,8 @@ const APAStyleBib=(PubData)=>{
 export default class Publications extends ResumeBase {
     render() {
         return(
-            <div className="resume-content"  ref={this.divRef}>
-                <span className="resume-content resume-content-span" id='publications'> &nbsp; </span>
+            <div className="resume-content" id='publications' ref={this.divRef}>
+                <span className="resume-content resume-content-span"> &nbsp; </span>
                 <div className="resume-header">
                     <h3>Publications</h3>
                 </div>

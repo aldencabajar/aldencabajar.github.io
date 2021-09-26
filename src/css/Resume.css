@@ -67,7 +67,7 @@
 
 .work-exp-content .list li{
     padding-bottom: 15px;
-    font-size: 15px;
+    font-size: 18px;
 
 }
 .accd-summary-proj {
@@ -102,5 +102,5 @@
 
 /* Styling for publications*/
 #publications li {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }

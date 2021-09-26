@@ -65,6 +65,12 @@
     color:rgb(109, 108, 108);    
 }
 
+@media screen and (max-width: 850px) {
+  .side-nav {
+    display: none
+  }
+}
+
  
 /* .App-logo {
   height: 40vmin;

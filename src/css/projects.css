@@ -74,12 +74,13 @@
 }
 
 
-@media screen and (max-width: 760px) {
-    .proj-cell p {
-        margin-right:25%;
-    }
+@media screen and (max-width: 850px) {
     .proj-cell img {
         max-width:80%;
+    }
+    .proj-cell .body {
+        border-style: none;
+
     }
     .overlay .ghlogo {
         max-width: 50px;
@@ -88,9 +89,6 @@
     .overlay .blog {
         max-width: 67px;
         padding-left:10px;
-    }
-    .project-nav {
-        margin-right: 0px;
     }
 
 }

@@ -6,8 +6,8 @@ import Contact from './components/Contact';
 import Resume from './components/Resume/Resume'
 import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import {slide as Menu} from 'react-burger-menu'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState} from 'react';
+import ScrollToTop from './ScrollToTop';
 
 
 const App=()=>{
@@ -38,12 +38,14 @@ const App=()=>{
         </Menu>
         <div id="page-wrap" style={stylePageWrap}>
             <Navbar/>
-            <Switch>
-              <Route path = "/" exact component ={Home}/>
-              <Route path = "/projects" component={Projects}/>
-              <Route path = "/contact" component={Contact}/>
-              <Route path = "/resume" component={Resume}/>
-            </Switch>
+            <ScrollToTop>
+              <Switch>
+                <Route path = "/" exact component ={Home}/>
+                <Route path = "/projects" component={Projects}/>
+                <Route path = "/contact" component={Contact}/>
+                <Route path = "/resume" component={Resume}/>
+              </Switch>
+            </ScrollToTop>
         </div>
       </div>
     </Router>
