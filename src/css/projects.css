@@ -1,0 +1,96 @@
+
+.project-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 200px;
+
+}
+
+
+
+.proj-cell .body {
+    margin-bottom: 5%;
+    margin-left: 5%;
+    padding-left: 2%;
+    border-style: none none none solid;
+    border-left-width: 2px;
+    border-left-color:rgb(138, 138, 138);
+
+}
+
+.img-container {
+  display: inline;
+}
+
+
+.proj-cell h3 {
+    color:rgb(0, 0, 0);
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.proj-cell span {
+    margin-top: -100px;
+    padding-bottom: 100px;
+    display: block;
+}
+
+.proj-cell h5 {
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+.proj-cell p {
+    color:rgb(138, 138, 138);
+    font-size: 1em;
+    padding-right:15%;
+    /* margin-right: 50%; */
+}
+
+.proj-cell img {
+    /* margin-top: -100px; */
+    max-width:80%;
+    }
+
+.overlay .ghlogo {
+    transition: all .1s ease-in;
+    max-width:75px;
+    padding-right: 20px;
+
+}
+.overlay .blog {
+    max-width: 102px;
+    padding-left:20px;
+    transition: all .1s ease-in;
+}
+.overlay .ghlogo:hover {
+    max-width: 103px;
+}
+
+.overlay .blog:hover {
+    max-width: 130px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .proj-cell img {
+        max-width:80%;
+    }
+    .proj-cell .body {
+        border-style: none;
+
+    }
+    .overlay .ghlogo {
+        max-width: 50px;
+        padding-right:5px
+    }
+    .overlay .blog {
+        max-width: 67px;
+        padding-left:10px;
+    }
+
+}
+
+
+

@@ -1,0 +1,90 @@
+/* burger styling */
+.bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 15px;
+    right: 100px;
+    top: 60px;
+  }
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+
+}
+.bm-cross {
+    background: #1f2020;
+  }
+.bm-menu a {
+color: #423c3c;
+text-decoration: None;
+padding: 1em;
+transition: all .2s ease-in;
+}
+.bm-menu a:hover {
+    color:rgb(163, 172, 180);
+}
+
+.bm-burger-bars {
+  background: #e0e1e4;
+}
+.bm-menu {
+    background: #f3f3f5;
+    padding: 5em 1.5em 0;
+    font-size: calc(4vmin);
+    text-align: center;
+}
+
+.bm-item {
+display: inline-block;
+}
+
+.Navbar {
+    text-align: center;
+    background-color: rgb(69, 143, 212);
+    display: flex;
+    color: white;
+    padding-left: 10%;
+    padding-top: 50px;
+    height: 50px;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+
+.navHeader {
+    align-items: center;
+    transition: all .2s ease-in;
+}
+
+.navHeader h1 {
+    margin-top: 0px;
+}
+
+.navHeader:hover {
+    text-decoration: underline;
+}
+
+.nav-list {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav-list li {
+    transition: all .1s ease-in;
+}
+
+.nav-list li:hover {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-list {
+        display: none
+    }
+    
+}

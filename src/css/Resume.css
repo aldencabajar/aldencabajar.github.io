@@ -1,0 +1,106 @@
+/*General styling for resume page*/
+#resume-all {
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 270px;
+
+}
+.side-nav-resume {
+    padding-top: 50px;
+    padding-right: 50px;
+    width: 500px; 
+}
+.resume-content-span {
+    margin-top: -50px;
+    padding-bottom: 50px;
+    display: block;
+}
+
+.resume-content {
+    padding-right: 50px;
+}
+
+.resume-header {
+    position: sticky;
+    top: 100px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+}
+.resume-header h3 {
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    text-align: center;
+    margin-right: 25%;
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.work-exp-cell { 
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 25px;
+}
+.work-exp-content {
+    width: 80%;
+}
+
+.work-exp-date {
+    width: 20%;
+    padding-top: 50px;
+    text-align: left;
+    font-size: 2.5vmin;
+}
+
+.work-exp-cell h4 {
+    text-align: left;
+    margin-right: 10%;
+    margin-top: 0;
+    font-weight: normal;
+    /* font-size: 18px; */
+}
+
+.work-exp-cell h3 {
+    margin-bottom: 0;
+    /* font-size: 25px; */
+}
+
+.work-exp-content .list li{
+    padding-bottom: 15px;
+    font-size: 18px;
+
+}
+.accd-summary-proj {
+    font-weight: normal;
+    font-size: 15px;
+
+}
+
+.accd-details-proj {
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.skill-group {
+    /* height: 500px  */
+    width:100%; 
+    overflow: hidden;
+}
+
+
+/* Styling for Skills */
+.skill-group-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom:0px;
+}
+.skill-group-container > div {
+    flex:50%; 
+}
+
+/* Styling for publications*/
+#publications li {
+    padding-bottom: 20px;
+}
