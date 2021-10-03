@@ -1,0 +1,60 @@
+[
+    {
+        "job_title": "Data Scientist",
+        "company": "OptumLabs Inc., A subsidiary of UnitedHealth Group",
+        "timeline": "January 2018-Present",
+        "description": "Performed statistical analysis and built machine learning models in various projects relevant to healthcare.",
+        "projects": [
+            {
+                "title": "Analysis of current diagnosis and treatment paradigms of lung cancer",
+                "description": "Used healthcare claims data to find current trends in the diagnosis and treatment of lung cancer, as well as evaluating oncology centersand their current capabilities"
+            },
+            {
+                "title": "Patient phenotyping in stress induction experiments",
+                "description": "used a WaveNet Decoder and a pretrained encoder to create representation of stress response from physiological signals."
+            },
+            {
+                "title": "Modeling of hospital admissions for the frail and aging population",
+                "description": "Fitted poisson and negative binomial models to assess the risk of inpatient stays for patients aged >= 65 years old."
+            },
+            {
+                "title": "Public database mining for possible drug interactions causing adverse events",
+                "description": "Used the FDA Adverse Event Reporting System (FAERS) public database and developed an R package that will list drug interactions that will most likely create an adverse event."
+            },
+            {
+                "title": "Patient classification on diabetes intervention success and participation",
+                "description": "Developed machine learning and statistical models that would help understand and predict metrics of success in a diabetes intervention"
+            }
+
+        ]
+
+    },
+    {
+        "job_title": "Research Associate",
+        "company": "Bioprocess Engineering and Research Center, University of San Carlos",
+        "timeline": "Nov 2015-Nov 2017",
+        "description": "Designed and performed experiments in the development of commercial products (food ingeredients, nutraceuticals) from mango waste in collaboration with a biotech startup.",
+        "projects": [
+            {
+                "title": "Applied Design of experiments to construct efficient explorations of the parameter space."
+            },
+            {
+                "title": "Used statistical methods and software for inference and modeliing in experiments."
+            },
+            {
+                "title": "Used response surface methodology for the optimization of spray drying parameters to increase yields and product quality."
+            }
+        ]
+    },
+    {
+        "job_title": "Instructor",
+        "company": "Engineering Mathematics Department, School of Engineering, University of San Carlos",
+        "timeline": "2016-2017",
+        "description": "Designed and performed experiments in the development of commercial products (food ingeredients, nutraceuticals) from mango waste in collaboration with a biotech startup.",
+        "projects": [
+            {
+                "title": "Taught trigonometry and differential calculus to undergraduate engineering and architecture students"
+            }
+        ]
+    }
+]

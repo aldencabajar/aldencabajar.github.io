@@ -14,11 +14,11 @@ class HoverImage extends React.Component {
             resized: false,
             CurrWindowSize: 0 
         }
-        this.ghlogo = process.env.PUBLIC_URL + "/github-icon.png"
-        this.blog = process.env.PUBLIC_URL + "/blog-icon.png" 
+        this.ghlogo = "img/github-icon.png"
+        this.blog = "img/blog-icon.png" 
         this.gh_link = String(this.props.gh)
         this.blog_link = String(this.props.blog_link)
-        this.img_link = process.env.PUBLIC_URL + this.props.image
+        this.img_link = 'img/' + this.props.image
         this.imageRef = React.createRef()
     }
 
@@ -86,8 +86,8 @@ class HoverImage extends React.Component {
 
     render() {
         return(
-            <div className="img-container" 
-            onMouseOver={this.EventWhenHover} onMouseOut={this.EventOut}>
+            <div className="img-container" onMouseOver={this.EventWhenHover} 
+            onMouseOut={this.EventOut}>
                 <img src={this.img_link} 
                 ref={this.imageRef}
                 onLoad={this.GetDimensions}

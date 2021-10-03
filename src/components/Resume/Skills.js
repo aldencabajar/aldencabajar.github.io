@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsData from "../../data/Skills.json";
+import SkillsData from "data/Skills.json";
 import { Bar } from "react-chartjs-2";
 import ResumeBase from "./ResumeBase";
 
@@ -52,7 +52,7 @@ const SkillBarGroup=(props)=>{
     return(
         <div className="skill-group" id={props.groupName}>
             <h4>{props.groupName}</h4>
-            <Bar data={data} options={options} />
+            <Bar data={data} options={options} redraw={props.redraw}/>
         </div>
     )
 
@@ -79,7 +79,8 @@ class Skills extends ResumeBase {
 
     }
     shouldComponentUpdate(nextProps, nextState) {
-        return(nextState.inView && (nextState.inView !== this.state.inView))
+        const update = nextState.inView && (nextState.inView !== this.state.inView)
+        return(update)
 
     }
 
@@ -105,6 +106,7 @@ class Skills extends ResumeBase {
                         (items, el)=>{return(
                         <SkillBarGroup groupName={items.group} 
                         skillSet={items.skills} Color={PuORRGBA[el]}
+                        redraw={this.state.inView}
                        />
                         )}
                     )}

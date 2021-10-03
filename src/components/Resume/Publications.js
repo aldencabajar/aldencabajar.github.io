@@ -1,7 +1,8 @@
-import PublicationData from "../../data/PublicationData.json"
+import PublicationData from "data/PublicationData.json"
 import InsertLinkIcon from '@material-ui/icons/InsertLink';
 import Link from '@material-ui/core/Link'
 import ResumeBase from "./ResumeBase";
+import React from 'react';
 
 
 const APAStyleBib=(PubData)=>{

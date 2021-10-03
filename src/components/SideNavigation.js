@@ -1,6 +1,5 @@
-
 import React from "react";
-import {HashLink} from "react-router-hash-link";
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 class Navigation extends React.Component {
     constructor(props) {
@@ -10,7 +9,11 @@ class Navigation extends React.Component {
         }
         this.data = props.data
         this.route = props.route
+        this.header= props.header
+        this.className = props.className
     }
+
+    
     UpdateStyles=(props)=>{
         var index
         const margin = 175 
@@ -55,16 +58,20 @@ class Navigation extends React.Component {
 
     render() {
         return(
-        <ul>
-            {this.data.map((item, i)=>{
-                return(
-                    <HashLink to={this.route + "#" + item.id} 
-                    style={this.state.listItemStyles[i]}>
-                        <li>{item.title}</li>
-                    </HashLink>
-                )
-            })}
-        </ul>
+        <div className={this.className}>
+            <header>
+                <h3>{this.header}</h3>
+            </header>
+            <ul>
+                {this.data.map((item, i)=>{
+                    return(
+                        <AnchorLink to={this.route + "#" + item.id}>
+                            <li style={this.state.listItemStyles[i]}>{item.title}</li>
+                        </AnchorLink>
+                    )
+                })}
+            </ul>
+        </div>
         )
 
     }

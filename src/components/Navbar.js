@@ -1,6 +1,6 @@
-import '../css/Navbar.css';
-import '../App.css'
-import { Link } from 'react-router-dom';  
+import 'css/Navbar.css';
+import { Link } from 'gatsby';  
+import React from 'react';
 
 const listLink=(name, lnk, style) => {
     return(
@@ -17,8 +17,9 @@ function Navbar() {
 
     const menuItems ={
         Home: '/',
-        Projects: '/projects',
-        Resume: '/resume'
+        Projects: '/Projects',
+        Resume: '/Resume',
+        Blog: '/Blog'
     } 
     return (
         <div className="Navbar">
