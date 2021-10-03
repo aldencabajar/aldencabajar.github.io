@@ -18,7 +18,8 @@ function Navbar() {
     const menuItems ={
         Home: '/',
         Projects: '/Projects',
-        Resume: '/Resume'
+        Resume: '/Resume',
+        Blog: '/Blog'
     } 
     return (
         <div className="Navbar">
