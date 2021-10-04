@@ -1,0 +1,24 @@
+
+.blog {
+    margin-right: 125px;
+}
+
+.blog-body  {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.blog-card {
+    font-size: 85%;
+    padding-right: 100px;
+    padding-bottom: 25px;
+    /* margin-right: 150px; */
+}
+
+.blog-body h2 {
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+
+.blog-card p {
+    color:rgb(107, 107, 107);
+}

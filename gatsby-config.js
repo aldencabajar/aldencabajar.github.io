@@ -21,6 +21,13 @@ module.exports = {
       __key: "pages",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'blog',
+        path: './content/posts/',
+      }
+    },
+    {
       resolve: "gatsby-plugin-root-import",
       options: {
         resolveModules: [path.join(__dirname, "src")],
