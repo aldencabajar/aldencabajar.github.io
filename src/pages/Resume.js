@@ -9,8 +9,10 @@ import Layout from 'components/layout';
 
 
 const Resume=()=>{
+    const isBrowser = ((typeof window !== 'undefined') || (typeof document !== 'undefined'))
+    const initPos =  isBrowser ? document.documentElement.scrollTop : null
     const [cellOffset, setCellOffset] = useState([0, 0, 0])
-    const [pageYOffset, SetOffset] = useState(window.pageYOffset || document.documentElement.scrollTop)
+    const [pageYOffset, SetOffset] = useState(initPos)
 
     const navData = [
         {title: "Work Experience", id: "workExperience"},
@@ -19,12 +21,15 @@ const Resume=()=>{
     ] 
 
     useEffect(()=>{
-        const onScroll=(e) =>{
-            SetOffset(window.pageYOffset || document.documentElement.scrollTop)
-        }
-        window.addEventListener("scroll", onScroll)
+            const onScroll=(e) =>{
+                const pos = isBrowser ? window.pageYOffset || document.documentElement.scrollTop : null
+                SetOffset(pos)
+            }
+        if (isBrowser) window.addEventListener("scroll", onScroll)
         return ()=>{
-            window.removeEventListener("scroll", onScroll)
+            if (isBrowser) {
+                window.removeEventListener("scroll", onScroll) 
+            } 
         }
         // console.log(cellOffset)
     }, [])

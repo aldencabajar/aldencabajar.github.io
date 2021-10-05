@@ -38,10 +38,12 @@ class ProjectCell extends React.Component {
 
 const Projects=()=>{
     const h3elems = useRef([])
+    const isBrowser = ((typeof window !== 'undefined') || (typeof document !== 'undefined'))
+    const initPos =  isBrowser ? document.documentElement.scrollTop : null
     const [Dims, SetDims] = useState([])
-    const [pageYOffset, SetOffset] = useState(window.pageYOffset || document.documentElement.scrollTop)
+    const [pageYOffset, SetOffset] = useState(initPos)
     const ScrollEventHandler=()=>{
-        var top = window.pageYOffset || document.documentElement.scrollTop
+        const top = isBrowser ? window.pageYOffset || document.documentElement.scrollTop : null
         SetOffset(top)
     }
 
@@ -61,11 +63,17 @@ const Projects=()=>{
             let elems = h3elems.current
             UpdateElemDims(elems, pageYOffset)
         } 
-        window.addEventListener("scroll", ScrollEventHandler)
-        window.addEventListener("resize", resizeEventHandler)
+        if (isBrowser) {
+            window.addEventListener("scroll", ScrollEventHandler)
+            window.addEventListener("resize", resizeEventHandler)
+
+        }
         return()=>{
-            window.removeEventListener("Scroll", ScrollEventHandler)
-            window.removeEventListener("resize", resizeEventHandler)
+            if (isBrowser) {
+                window.removeEventListener("Scroll", ScrollEventHandler)
+                window.removeEventListener("resize", resizeEventHandler)
+                
+            }
         }
     }, [pageYOffset])
 
