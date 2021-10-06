@@ -6,12 +6,29 @@
 .blog-body  {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 25px;
+    row-gap: 25px;
 }
 .blog-card {
-    font-size: 85%;
+    font-size: 75%;
     padding-right: 100px;
+    padding-left: 25px;
     padding-bottom: 25px;
+    padding-top: 10px;
+    text-decoration: none;
+    /* border-style: none solid none solid;
+    border-radius: 25px;
+    border-color: rgb(209, 208, 208);
+    border-width: 2px; */
     /* margin-right: 150px; */
+}
+
+.blog-link.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+
 }
 
 .blog-body h2 {

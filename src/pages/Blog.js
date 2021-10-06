@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import Layout from 'components/layout';
 import BlogCard from 'components/Blog/BlogCard';
 import 'css/blog.css';
@@ -20,7 +20,8 @@ export default function Blog({data}) {
                     {posts.map(post=>{
                         return(
                         <BlogCard id={post.id} title={post.frontmatter.title}
-                        time={post.frontmatter.date} excerpt={post.excerpt}/>
+                        time={post.frontmatter.date} excerpt={post.excerpt}
+                        slug = {post.fields.slug} />
                         )
                     })}
                 </div>
@@ -33,6 +34,9 @@ export default function Blog({data}) {
   query MyQuery {
     blog: allMarkdownRemark {
       posts: nodes {
+        fields {
+          slug
+        }
         frontmatter {
           date(fromNow: true)
           title
