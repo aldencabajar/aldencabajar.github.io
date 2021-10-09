@@ -71,6 +71,12 @@
   .side-nav {
     display: none
   }
+  .section-body {
+    margin-left: 50px;
+    margin-right: 25px;
+    padding: 0px;
+    margin-bottom: 25px;
+  }
 }
 body {
   margin: 0;

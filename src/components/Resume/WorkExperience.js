@@ -17,12 +17,13 @@ class WorkExperience extends ResumeBase {
         data.map((doc)=>{
             return(
             <div className="work-exp-cell">
+                <header>
+                    <h3>{doc.job_title}</h3>
+                    <p style={{'fontSize': '2vmin'}}>{doc.timeline}</p>
+                    <p style={{'fontWeight': 'lighter'}}>{doc.company}</p>
+                    <h4>{doc.description}</h4>
+                </header>
                 <div className="work-exp-content">
-                    <header>
-                        <h3>{doc.job_title}</h3>
-                        <p style={{'fontWeight': 'lighter'}}>{doc.company}</p>
-                        <h4>{doc.description}</h4>
-                    </header>
                     <ul className="work-exp-content list">
                         {doc.projects.map((proj, i)=>{
                             return(
@@ -34,9 +35,6 @@ class WorkExperience extends ResumeBase {
                             )
                         })}
                     </ul>
-                </div>
-                <div className="work-exp-date">
-                    {doc.timeline}
                 </div>
             </div>
             )

@@ -14,7 +14,7 @@ class ProjectsDesc extends React.Component {
     
     render () {
         return(
-            <Accordion>
+            <Accordion className='accd'>
                 <AccordionSummary 
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"

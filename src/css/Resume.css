@@ -38,11 +38,12 @@
 
 .work-exp-cell { 
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     padding-bottom: 25px;
 }
 .work-exp-content {
-    width: 80%;
+    width: 85%;
 }
 
 .work-exp-date {
@@ -68,6 +69,7 @@
 .work-exp-content .list li{
     padding-bottom: 15px;
     font-size: 18px;
+    margin-left: -30px;
 
 }
 .accd-summary-proj {
@@ -79,6 +81,10 @@
 .accd-details-proj {
     font-weight: lighter;
     font-size: 15px;
+}
+
+.accd {
+    margin-left: -50px;
 }
 
 .skill-group {
@@ -103,4 +109,23 @@
 /* Styling for publications*/
 #publications li {
     padding-bottom: 20px;
+}
+
+@media screen and (max-width: 850px) {
+    .work-exp-content {
+        width: 100%;
+    }
+    #resume-all {
+        margin-bottom: 25px;
+    }
+
+    .skill-group-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-group {
+        width: 75%;
+    }
 }

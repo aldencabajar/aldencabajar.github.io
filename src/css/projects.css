@@ -3,7 +3,6 @@
     display:flex;
     justify-content: space-around;
     align-items: flex-start;
-    margin-bottom: 200px;
 
 }
 
@@ -66,20 +65,40 @@
 }
 .overlay .ghlogo:hover {
     max-width: 103px;
+    z-index: 1;
 }
 
 .overlay .blog:hover {
     max-width: 130px;
+    z-index: 1;
 }
 
 
 @media screen and (max-width: 850px) {
-    .proj-cell img {
-        max-width:80%;
+    .project-container {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+    .proj-cell {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
     }
     .proj-cell .body {
         border-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .proj-cell p {
+        padding-right: 0;
+        font-size: 3vmin;
 
+    }
+    .proj-cell img {
+        margin-right: 0px;
     }
     .overlay .ghlogo {
         max-width: 50px;

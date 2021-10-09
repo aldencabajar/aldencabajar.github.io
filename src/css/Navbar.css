@@ -86,5 +86,10 @@ display: inline-block;
     .nav-list {
         display: none
     }
+    .bm-burger-button {
+        position: fixed;
+        right: 25px;
+        top: 60px;
+    }
     
 }
