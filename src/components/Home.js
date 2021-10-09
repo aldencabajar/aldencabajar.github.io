@@ -15,7 +15,7 @@ const channels = [
     'link': 'mailto:aldencabajar@gmail.com',
     'icon': <Email style={IconStyle}/>},
     {'channel': 'LinkedIn', 
-    'desc':'https://www.linkedin.com/in/alden-cabajar-821a4010b/', 
+    'desc':'LinkedIn Profile', 
     'link':'https://www.linkedin.com/in/alden-cabajar-821a4010b/', 
     'icon':<LinkedInIcon style={IconStyle}/>},
     {'channel':'GitHub', 

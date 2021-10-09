@@ -77,6 +77,10 @@
     padding: 0px;
     margin-bottom: 25px;
   }
+
+  .section-body p {
+    font-size: 3vmin;
+  }
 }
 body {
   margin: 0;

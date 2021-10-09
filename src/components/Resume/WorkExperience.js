@@ -19,10 +19,10 @@ class WorkExperience extends ResumeBase {
             <div className="work-exp-cell">
                 <header>
                     <h3>{doc.job_title}</h3>
-                    <p style={{'fontSize': '2vmin'}}>{doc.timeline}</p>
-                    <p style={{'fontWeight': 'lighter'}}>{doc.company}</p>
-                    <h4>{doc.description}</h4>
+                    <h4 id='date'>{doc.timeline}</h4>
+                    <h4 id='company'>{doc.company}</h4>
                 </header>
+                <p>{doc.description}</p>
                 <div className="work-exp-content">
                     <ul className="work-exp-content list">
                         {doc.projects.map((proj, i)=>{

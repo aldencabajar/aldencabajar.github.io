@@ -44,7 +44,7 @@ export default class Publications extends ResumeBase {
                 <div className="resume-header">
                     <h3>Publications</h3>
                 </div>
-                <ul style={{listStyle:"none"}}>
+                <ul>
                     {PublicationData.map((data)=>{
                         return(<li>{APAStyleBib(data)}</li>)
                     })}
