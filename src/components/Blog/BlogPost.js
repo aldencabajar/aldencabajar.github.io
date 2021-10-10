@@ -1,15 +1,33 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from 'components/layout';
+import Divider from '@material-ui/core/Divider';
+import Paper from '@material-ui/core/Paper';
+import 'css/blog-post.css'
 
 
 export default function BlogPost( {data} ) {
     const post = data.markdownRemark
+    const blogDate = new Date(post.frontmatter.date).toISOString().split('T')[0]
+
+    useEffect(() =>{
+        console.log(blogDate)
+    })
+
+
+
     return(
         <Layout>
-            <h1>{post.frontmatter.title}</h1> 
-            <small>{post.frontmatter.date}</small> 
-            <div dangerouslySetInnerHTML={{__html: post.html}} />
+            <div className = 'section-body blog-post'>
+                <header className ='blog-post-header'>
+                    <h2>{post.frontmatter.title}</h2>
+                    <h3 id='post-date'>{'posted on: ' + blogDate}</h3> 
+                </header>
+                <Divider className='blog-post-divide'/>
+                <Paper className='blog-post-canvas' elevation={3}>
+                    <div className='blog-post-content' dangerouslySetInnerHTML={{__html: post.html}} />
+                </Paper>
+            </div>
         </Layout>
     )
 }
