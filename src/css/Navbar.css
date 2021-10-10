@@ -97,6 +97,7 @@ display: inline-block;
     .bm-menu {
         font-size: 35px;
         text-align: right;
+        padding-top: 3em;
     }
     
 }

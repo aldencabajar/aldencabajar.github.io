@@ -2,13 +2,11 @@ import React, {useEffect} from 'react';
 import { Link } from 'gatsby';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { CardActionArea } from '@material-ui/core';
 import  { makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles({
     root: {
     fontSize: '75%',
-    paddingRight: '100px',
     paddingLeft: '25px',
     paddingBottom: '25px',
     paddingTop: '10px',

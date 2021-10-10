@@ -14,24 +14,24 @@
         "group": "Machine Learning",
         "skills": {
             "Deep learning": 4,
+            "Natural Language Processing": 4,
+            "Unsupervised Learning": 3,
             "Pytorch": 3,
             "Tensorflow": 3,
-            "Natural Language Processing": 4,
-            "Computer Vision": 2,
-            "Unsupervised Learning": 3
+            "Computer Vision": 2
         }
     },
     {
         "group": "Programming",
         "skills": {
             "R": 5,
-            "Python": 4,
             "SQL": 5,
+            "Python": 4,
+            "Visual Basic": 3,
             "HTML": 3,
             "CSS": 2,
             "JavaScript": 2,
-            "React JS": 2,
-            "Visual Basic": 3
+            "React": 2
         }
     }, 
     {

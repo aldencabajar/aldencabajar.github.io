@@ -1,6 +1,6 @@
 import React from "react";
 import SkillsData from "data/Skills.json";
-import { Bar } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 import ResumeBase from "./ResumeBase";
 
 
@@ -22,17 +22,22 @@ const SkillBarGroup=(props)=>{
     const options={
         indexAxis: "y",
         responsive: true,
+        aspectRatio: 1.5,
         plugins:{
             legend: {
                 display: false
             },
         },
-       scales:{
+       scales: {
            x: {
-              min: 0,
-              max: 5,
+             min: 0, 
+             max: 5, 
+             grid: {drawOnChartArea: false}
+            },
+            y: {
+                grid: {drawOnChartArea: false}
             }
-        }
+        },
 
     }
     const kv = Object.entries(props.skillSet)
@@ -45,8 +50,9 @@ const SkillBarGroup=(props)=>{
             backgroundColor: props.Color,
             borderColor: props.Color,
             borderWidth: 1,
+            barThickness: 10,
             },
-        ]
+        ],
     }
 
     return(
