@@ -1,6 +1,9 @@
 import React from "react";
 import ProjectsDesc from "./ProjectsDesc.js";
 import ResumeBase from "./ResumeBase";
+import Paper from '@material-ui/core/Paper';
+import ListItem from '@material-ui/core/ListItem'
+
 
 class WorkExperience extends ResumeBase {
     constructor(props){
@@ -28,7 +31,7 @@ class WorkExperience extends ResumeBase {
                         {doc.projects.map((proj, i)=>{
                             return(
                             typeof proj.description == "undefined" ? 
-                            <li>{proj.title}</li> : 
+                            <Paper className='work-desc-card'><li>{proj.title}</li></Paper>: 
                             <ProjectsDesc title={proj.title}
                             desc={proj.description}
                             id={this.DerivePrefixId(doc.job_title, i)}/>

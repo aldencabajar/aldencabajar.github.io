@@ -30,8 +30,10 @@ transition: all .2s ease-in;
 }
 .bm-menu {
     background: #f3f3f5;
-    padding: 5em 1.5em 0;
-    font-size: calc(4vmin);
+    padding: 5em 1.5em 0 1.5em;
+    /* padding-left: auto; */
+    /* padding-right: auto; */
+    font-size: 4vmin;
     text-align: center;
 }
 
@@ -90,6 +92,11 @@ display: inline-block;
         position: fixed;
         right: 25px;
         top: 60px;
+    }
+
+    .bm-menu {
+        font-size: 35px;
+        text-align: right;
     }
     
 }

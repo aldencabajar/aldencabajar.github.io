@@ -45,6 +45,10 @@
     width: 85%;
 }
 
+.work-desc-card {
+    margin-top: 2px; 
+}
+
 /* .work-exp-cell header p{
     margin-bottom: 0;
 } */
@@ -78,11 +82,15 @@
 }
 
 .work-exp-content .list li{
-    padding-bottom: 15px;
+    padding: 10px 15px 10px 15px;  
     font-size: 15px;
-    margin-left: -30px;
     font-weight: normal;
 
+}
+.work-exp-content .list {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
 }
 .accd-summary-proj {
     font-weight: normal;
@@ -91,13 +99,11 @@
 }
 
 .accd-details-proj {
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 15px;
+    color: rgb(138, 138, 138);
 }
 
-.accd {
-    margin-left: -50px;
-}
 
 .skill-group {
     /* height: 500px  */
@@ -154,6 +160,17 @@
         width: 75%;
     }
     .resume-content {
-        padding-right: 25px;
+        padding-right: 0px;
+    }
+    .work-exp-content .list li{
+        font-size: 3vmin;
+    }
+
+    .accd-summary-proj {
+        font-size: 3vmin;
+    }
+    .accd-details-proj {
+        font-weight: normal;
+        font-size: 3vmin;
     }
 }
