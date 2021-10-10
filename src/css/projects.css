@@ -40,7 +40,7 @@
     margin-top: 0;
 }
 
-.proj-cell p {
+.proj-cell .body p {
     color:rgb(138, 138, 138);
     font-size: 1em;
     padding-right:15%;
@@ -92,9 +92,8 @@
         margin: 0;
         padding: 0;
     }
-    .proj-cell p {
-        padding-right: 0;
-        font-size: 3vmin;
+    .proj-cell .body p {
+        font-size: 4vmin;
 
     }
     .proj-cell img {
