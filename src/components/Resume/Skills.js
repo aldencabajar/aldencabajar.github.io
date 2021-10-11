@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import SkillsData from "data/Skills.json";
 import { Bar, Line } from "react-chartjs-2";
 import ResumeBase from "./ResumeBase";
@@ -21,8 +21,7 @@ const PuORRGBA = rgbaFormat(PuOrRGBRaw,1)
 const SkillBarGroup=(props)=>{
     const options={
         indexAxis: "y",
-        responsive: true,
-        aspectRatio: 1.5,
+        responsive: false,
         plugins:{
             legend: {
                 display: false
@@ -32,33 +31,52 @@ const SkillBarGroup=(props)=>{
            x: {
              min: 0, 
              max: 5, 
-             grid: {drawOnChartArea: false}
+             grid: {drawOnChartArea: false},
+             ticks: {
+                 count: 6,
+                },
             },
             y: {
-                grid: {drawOnChartArea: false}
+                type: 'category',
+                grid: {drawOnChartArea: false},
+                ticks:{
+                    callback: function(value, index, labels) {
+                    var val = this.getLabelForValue(value)
+                    if(/\s/.test(val)) {
+                        return val.split(" ");
+                    } else {
+                        return val 
+                    }
+                  }
+                }
             }
         },
 
     }
     const kv = Object.entries(props.skillSet)
     const data={
-        labels: kv.map((x)=>{return(x[0])}),
-        datasets: [
-            {
+        labels : kv.map( x => x[0] ),
+        datasets: [{
+            axis: 'y',
             label: props.groupName,
-            data: kv.map((x)=>{return(x[1])}),
+            data: kv.map( x => x[1]),
             backgroundColor: props.Color,
             borderColor: props.Color,
             borderWidth: 1,
             barThickness: 10,
-            },
+          },
         ],
     }
 
     return(
         <div className="skill-group" id={props.groupName}>
             <h4>{props.groupName}</h4>
-            <Bar data={data} options={options} redraw={props.redraw}/>
+            <Bar data={data} 
+            options={options} 
+            redraw={props.redraw}
+            width={300}
+            height = {325}
+            />
         </div>
     )
 
