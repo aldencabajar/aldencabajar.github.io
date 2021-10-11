@@ -44,10 +44,12 @@
     .blog-body  {
         display: flex;
         flex-direction: column;
+        margin-top: 50px;
     }
 
     .blog {
-        margin-right: 25px; 
+        margin-right: 0px; 
+        margin-left: 0px;
     }
 
 }

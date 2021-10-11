@@ -18,7 +18,9 @@ const rgbaFormat=(colorArr, alpha)=>{
 
 }
 const PuORRGBA = rgbaFormat(PuOrRGBRaw,1)
-const SkillBarGroup=(props)=>{
+
+
+function SkillBarGroup(props) {
     const options={
         indexAxis: "y",
         responsive: false,
@@ -74,8 +76,8 @@ const SkillBarGroup=(props)=>{
             <Bar data={data} 
             options={options} 
             redraw={props.redraw}
-            width={300}
-            height = {325}
+            width={props.width}
+            height = {props.height}
             />
         </div>
     )
@@ -86,7 +88,13 @@ const SkillBarGroup=(props)=>{
 class Skills extends ResumeBase {
     constructor(props){
         super(props)
-        this.state = {inView: false}
+        this.state = {
+            inView: false,
+            dims: {
+                width: 300,
+                height: 300,
+            }
+        }
     }
     isComponentInView=()=>{
         const elem = document.querySelector("#skills-display")
@@ -128,8 +136,12 @@ class Skills extends ResumeBase {
                 <div className ="skill-group-container">
                     {SkillsData.map(
                         (items, el)=>{return(
-                        <SkillBarGroup groupName={items.group} 
-                        skillSet={items.skills} Color={PuORRGBA[el]}
+                        <SkillBarGroup 
+                        groupName={items.group} 
+                        skillSet={items.skills} 
+                        Color={PuORRGBA[el]}
+                        width={this.state.dims.width}
+                        height={this.state.dims.height}
                         redraw={this.state.inView}
                        />
                         )}
