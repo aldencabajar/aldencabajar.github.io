@@ -1,6 +1,7 @@
 import 'css/Navbar.css';
 import { Link } from 'gatsby';  
 import React from 'react';
+import Paper from '@material-ui/core/Paper';
 
 const listLink=(name, lnk, style) => {
     return(

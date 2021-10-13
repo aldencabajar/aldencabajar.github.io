@@ -24,7 +24,7 @@ export default function BlogPost( {data} ) {
                     <h3 id='post-date'>{'posted on: ' + blogDate}</h3> 
                 </header>
                 <Divider className='blog-post-divide'/>
-                <Paper className='blog-post-canvas' elevation={3}>
+                <Paper className='blog-post-canvas' elevation={1}>
                     <div className='blog-post-content' dangerouslySetInnerHTML={{__html: post.html}} />
                 </Paper>
             </div>

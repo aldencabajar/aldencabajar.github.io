@@ -26,7 +26,7 @@ function BlogCard(props) {
     
     return(
         <Link to={props.slug} className={classes.cardLink}>
-            <Card className = 'blog-card' elevation={3}>
+            <Card className = 'blog-card' elevation={1}>
                 <CardContent>
                     <article key={props.id}>
                         <h2>{props.title}</h2>

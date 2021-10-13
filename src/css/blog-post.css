@@ -1,6 +1,7 @@
 .blog-post  {
     margin-right: 20%;
     margin-top: 75px;
+    line-height: 40px;
 }
 
 .blog-post-header {
@@ -42,6 +43,5 @@
     .blog-post-content {
         padding-left: 20px;
         padding-right: 20px;
-        font-size: 3vmin;
     }
 }

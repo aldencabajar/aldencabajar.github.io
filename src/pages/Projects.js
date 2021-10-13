@@ -4,6 +4,7 @@ import Navigation from  "components/SideNavigation"
 import React, {useRef, useEffect, useState} from "react";
 import ReactDOM from 'react-dom';
 import 'css/projects.css';
+import ProjectHeader from 'components/utils/header'; 
 import Layout from 'components/layout';
 
 
@@ -80,10 +81,8 @@ const Projects=()=>{
     return (
         <Layout>
             <div className="section-body">
-                <header className ="section-header">
-                    <h1> Projects </h1>
-                    <h3>Been doing this and that.</h3>
-                </header>
+                <ProjectHeader title={'Projects'} subtitle={'Been doing this and that.'}/>
+               
                 <div className="project-container">
                     <div className="project-cell-container">
                         { data.map((project, index) => {

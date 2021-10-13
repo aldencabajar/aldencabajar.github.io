@@ -6,6 +6,7 @@ import Skills from "components/Resume/Skills";
 import Publications from "components/Resume/Publications";
 import Navigation from "components/SideNavigation";
 import Layout from 'components/layout';
+import ProjectHeader from 'components/utils/header';
 
 
 const Resume=()=>{
@@ -37,10 +38,8 @@ const Resume=()=>{
     return(
         <Layout>
             <div className="section-body">
-                <header className="section-header">
-                    <h1>Resume</h1>
-                    <h3>My current professional experience.</h3>
-                </header>
+                <ProjectHeader title={'Resume'}
+                subtitle={'My professional experience'} />
                 <div id="resume-all">
                     <div id="resume-main">
                         <WorkExperience data={WorkExpData} handleState={setCellOffset} order={0}/>

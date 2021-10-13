@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import Layout from 'components/layout';
 import BlogCard from 'components/Blog/BlogCard';
+import ProjectHeader from 'components/utils/header';
 import 'css/blog.css';
 import { graphql } from 'gatsby';
 
@@ -12,10 +13,7 @@ export default function Blog({data}) {
     return(
         <Layout>
             <div className='section-body blog'>
-                <header className='section-header'>
-                    <h1>Blog</h1>
-                    <h3>Documented ramblings and learnings.</h3>
-                </header>
+              <ProjectHeader title={'Blog'} subtitle={'Documented ramblings and learnings'} />
                 <div className='blog-body'>
                     {posts.map(post=>{
                         return(
