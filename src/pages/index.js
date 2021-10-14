@@ -40,10 +40,14 @@ const Home=() => {
   return (
     <Layout>
       <div className='section-body home'>
-        <PageHeader title={'Hello!'} subtitle={'Welcome to my page.'}/>
-
-        <p>I am <b>Alden Cabajar</b>, currently working as a <b> Data Scientist </b> for a healthcare company. This page serves as a portfolio for everything I have worked on so far. 
+        <PageHeader 
+        className='section-header header-home'
+        title={'Hello.'} 
+        subtitle={'& Welcome to my page!'} />
+        
+        <p>I am <b id='bold-home'>Alden Cabajar</b>, currently working as a <b id='bold-home'> Data Scientist </b> for a healthcare company. This page serves as a portfolio for everything I have worked on so far. 
             This will also contain my thoughts and ramblings in the future.</p> 
+        <Divider />
         <p> For future engagements, I am active in the following channels. </p>
         {
           channels.map((data)=>{

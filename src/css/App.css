@@ -1,5 +1,7 @@
 .App {
   background-color: rgb(255, 255, 255);
+  /* background-color: #f1faee; */
+  height: 100%;
   /* min-height: 100vh; */
 }
 
@@ -27,19 +29,48 @@
   text-align: justify;
 }
 
+.header-home {
+  background-color: #e0e1dd;
+  padding-top: 60px;
+  padding-bottom: 25px;
+  margin-right: 0;
+  margin-left: -25%;
+}
+
+.header-home {
+  font-size: 40px !important;
+}
+.header-home h1 {
+  padding-bottom: 15px;
+  padding-left: 20%;
+  color: #023047;
+}
+.header-home h3 {
+  font-size: 35px;
+  padding-left: 20%;
+  padding-bottom: 10px;
+  color:rgb(82, 80, 80);
+  font-weight: 500;
+}
+
+#bold-home {
+  color: #023047;
+}
+
 .section-body {
   padding-left: 20%;
   padding-top: 25px;
-  margin-bottom: 150px;
+  padding-bottom: 150px;
   font-size: 20px;
 }
 .home {
-  margin-top: 5%; 
+  padding-top: 0px;
   line-height: 40px;
+  padding-bottom: 25px;
 }
 
 .home p {
-  margin-right: 20%
+  margin-right: 35%
 }
 .channels {
   display: flex;
@@ -79,8 +110,7 @@
   .section-body {
     margin-left: 25px;
     margin-right: 25px;
-    padding: 0px;
-    margin-bottom: 25px;
+    padding: 0px 0px 25px 0px;
   }
 
   .section-header {
@@ -92,6 +122,10 @@
   }
   .home p {
     margin-right: 0;
+    font-size: 18px;
+  }
+  .home {
+    line-height: 30px;
   }
 }
 body {

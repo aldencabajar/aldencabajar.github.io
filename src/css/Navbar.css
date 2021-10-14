@@ -98,7 +98,8 @@ display: inline-block;
     }
 
     .navHeader {
-        font-size: 2.5vmin;
+        font-size: 3vmin;
+        padding-top: 5px;
     }
     .Navbar {
         padding-left: 15px;
