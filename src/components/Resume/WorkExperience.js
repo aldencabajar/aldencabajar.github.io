@@ -10,11 +10,11 @@ class WorkExperience extends ResumeBase {
         this.data = this.props.data
     }
 
-    DerivePrefixId=(stri, num)=>{
+    derivePrefixId=(stri, num)=>{
         return( (stri + num.toString()).toLowerCase().replace(" ", "-") )
     }
 
-    UnravelData=(data)=>{
+    unravelData=(data)=>{
         return(
         data.map((doc)=>{
             return(
@@ -33,7 +33,7 @@ class WorkExperience extends ResumeBase {
                             <Paper className='work-desc-card'><li>{proj.title}</li></Paper>: 
                             <ProjectsDesc title={proj.title}
                             desc={proj.description}
-                            id={this.DerivePrefixId(doc.job_title, i)}/>
+                            id={this.derivePrefixId(doc.job_title, i)}/>
                             )
                         })}
                     </ul>
@@ -49,10 +49,10 @@ class WorkExperience extends ResumeBase {
         return(
             <div className="resume-content" ref={this.divRef}>
                 <span className="resume-content resume-content-span" id='workExperience'>&nbsp;</span>
-                <div className="resume-header">
+                <div style={this.state.headerStyle} className='resume-header'>
                     <h3>Work Experience</h3>
                 </div>
-                {this.UnravelData(this.data)}
+                {this.unravelData(this.data)}
             </div>
         )
     }

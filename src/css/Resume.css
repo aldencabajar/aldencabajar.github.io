@@ -21,18 +21,19 @@
     padding-right: 50px;
 }
 
-.resume-header {
+/* .resume-header {
     position: sticky;
-    top: 100px;
-    z-index: 1;
+    top: 75px;
+    z-index: 3;
     background-color: rgb(255, 255, 255);
-}
+} */
 .resume-header h3 {
     color: rgb(0, 0, 0);
     font-weight: normal;
     text-align: center;
     margin-right: 25%;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     font-size: 25px;
 }
 

@@ -41,7 +41,7 @@ export default class Publications extends ResumeBase {
         return(
             <div className="resume-content" id='publications' ref={this.divRef}>
                 <span className="resume-content resume-content-span"> &nbsp; </span>
-                <div className="resume-header">
+                <div style={this.state.headerStyle} className='resume-header'>
                     <h3>Publications</h3>
                 </div>
                 <ul>

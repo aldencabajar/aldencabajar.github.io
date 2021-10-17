@@ -31,15 +31,14 @@
 
 .header-home {
   background-color: #e0e1dd;
+  /* background-color: #f1faee; */
   padding-top: 60px;
   padding-bottom: 25px;
   margin-right: 0;
   margin-left: -25%;
+  font-size: 40px;
 }
 
-.header-home {
-  font-size: 40px !important;
-}
 .header-home h1 {
   padding-bottom: 15px;
   padding-left: 20%;
@@ -69,8 +68,12 @@
   padding-bottom: 25px;
 }
 
-.home p {
+/* .home p {
   margin-right: 35%
+} */
+
+.home-content {
+  margin-right: 35%;
 }
 .channels {
   display: flex;
@@ -112,6 +115,13 @@
     margin-right: 25px;
     padding: 0px 0px 25px 0px;
   }
+  
+  .header-home h3{
+    font-size: 25px;
+  }
+  .header-home {
+    font-size: 30px;
+  }
 
   .section-header {
     margin-right: 0;
@@ -120,12 +130,13 @@
   .section-body p {
     font-size: 4vmin;
   }
-  .home p {
-    margin-right: 0;
+  .home-content {
     font-size: 18px;
+    margin-right: 25px;
   }
   .home {
     line-height: 30px;
+    margin-right: 0px;
   }
 }
 body {

@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme)=>({
   button: {
     margin: theme.spacing(1),
     textTransform: "none",
+  },
+  divider: {
+
   }
 }))
 
@@ -45,28 +48,30 @@ const Home=() => {
         title={'Hello.'} 
         subtitle={'& Welcome to my page!'} />
         
-        <p>I am <b id='bold-home'>Alden Cabajar</b>, currently working as a <b id='bold-home'> Data Scientist </b> for a healthcare company. This page serves as a portfolio for everything I have worked on so far. 
-            This will also contain my thoughts and ramblings in the future.</p> 
-        <Divider />
-        <p> For future engagements, I am active in the following channels. </p>
-        {
-          channels.map((data)=>{
-            return(
-              <div className='channels'>
-                {/* {data.icon} */}
-                {/* <p style={{'paddingLeft': '20px'}}>{data.link}</p> */}
-                <Button 
-                variant="outlined" 
-                color="primary" 
-                startIcon={data.icon}
-                href={data.link}
-                className={classes.button}>
-                  {data.desc}
-                </Button>
-              </div>
-              )
-          })
-        }
+        <div className='home-content'>
+          <p>I am <b id='bold-home'>Alden Cabajar</b>, currently working as a <b id='bold-home'> Data Scientist </b> for a healthcare company. This page serves as a portfolio for everything I have worked on so far. 
+              This will also contain my thoughts and ramblings in the future.</p> 
+          <Divider />
+          <p> For future engagements, I am active in the following channels. </p>
+          {
+            channels.map((data)=>{
+              return(
+                <div className='channels'>
+                  {/* {data.icon} */}
+                  {/* <p style={{'paddingLeft': '20px'}}>{data.link}</p> */}
+                  <Button 
+                  variant="outlined" 
+                  color="primary" 
+                  startIcon={data.icon}
+                  href={data.link}
+                  className={classes.button}>
+                    {data.desc}
+                  </Button>
+                </div>
+                )
+            })
+          }
+        </div>
       </div>
     </Layout>
   )

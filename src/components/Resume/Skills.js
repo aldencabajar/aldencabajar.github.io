@@ -89,11 +89,12 @@ class Skills extends ResumeBase {
     constructor(props){
         super(props)
         this.state = {
+            headerStyle: this.headerStyleNorm,
             inView: false,
             dims: {
                 width: 300,
                 height: 300,
-            }
+            },
         }
     }
     isComponentInView=()=>{
@@ -130,7 +131,7 @@ class Skills extends ResumeBase {
         return(
             <div className="resume-content" ref={this.divRef}>
                 <span className="resume-content resume-content-span" id='skills-display'></span>
-                <div className="resume-header">
+                <div style={this.state.headerStyle} className='resume-header'>
                     <h3>Professional Skills</h3>
                 </div>
                 <div className ="skill-group-container">
