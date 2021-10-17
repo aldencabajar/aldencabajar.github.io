@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - gatsby 
+      - imprv-header
 
 jobs:
   build:
