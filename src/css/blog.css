@@ -46,12 +46,13 @@
         display: flex;
         flex-direction: column;
         margin-top: 50px;
-    }
-
-
-    .blog-body {
         margin-right: 0px; 
         margin-left: 0px;
+    }
+
+    .blog-body p {
+        font-size: 1rem;
+
     }
 
     .blog {

@@ -21,12 +21,10 @@ export default function BlogPost( {data} ) {
             <div className = 'section-body blog-post'>
                 <header className ='blog-post-header'>
                     <h2>{post.frontmatter.title}</h2>
-                    <h3 id='post-date'>{'posted on: ' + blogDate}</h3> 
-                </header>
+                    <h3 id='post-date'>{'posted on ' + blogDate}</h3> 
                 <Divider className='blog-post-divide'/>
-                <Paper className='blog-post-canvas' elevation={1}>
-                    <div className='blog-post-content' dangerouslySetInnerHTML={{__html: post.html}} />
-                </Paper>
+                </header>
+                <div className='blog-post-content' dangerouslySetInnerHTML={{__html: post.html}} />
             </div>
         </Layout>
     )

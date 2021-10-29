@@ -1,21 +1,22 @@
 .blog-post  {
     margin-right: 20%;
     margin-top: 75px;
-    line-height: 40px;
 }
 
 .blog-post-header {
-    text-align: left 
+    text-align: left ;
+    line-height: 30px;
 } 
 
+
 #post-date {
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .blog-post-header h2 {
     margin-bottom: 0;
     padding-bottom: 0;
-    font-weight: normal;
 }
 .blog-post-header h3 {
     margin-top: 0;
@@ -30,6 +31,12 @@
 
 .blog-post-content  {
     padding: 5px 35px 50px 35px;
+    line-height: 30px;
+}
+
+.blog-post-content h3 {
+    font-weight: 500;
+    color:rgb(104, 104, 104);
 }
 
 @media screen and (max-width: 850px) {
@@ -39,6 +46,7 @@
     }
     .blog-post-header {
         margin-left: 25px;
+        margin-right: 25px;
     }
     .blog-post-content {
         padding-left: 20px;

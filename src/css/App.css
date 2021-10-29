@@ -124,23 +124,22 @@
   }
   
   .header-home h3{
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .header-home {
-    font-size: 2.4rem;
+    font-size: 2rem;
     border-radius: 0% 0% 75%;
-    padding-right: 10%;
   }
 
   .section-header {
     margin-right: 0;
   }
-
   .section-body p {
     font-size: 1.2rem;
+
   }
   .home-content {
-    font-size: 18px;
+    font-size: 3rem;
     margin-right: 15px;
     padding-right: 0px;
     padding: 5px 25px 15px 25px;

@@ -10,7 +10,6 @@ Hello! Welcome to my very first blog post!
 
 I'm looking forward to write more of the topics that interest me, and hopefully I could also impart a bit of knowlege. There are not alot of things in my head right now. But sooner some things will come.
 
-<br> 
 
 ### Trying out things 
 
