@@ -30,7 +30,7 @@
         "image": "cord-19-wordcloud.png" ,
         "description": "Used the CORD-19 corpus to extract useful topics out of it. Used Non-negative Matrix Factorization.", 
         "gh_link": "https://github.com/aldencabajar/cord-19-topic-modeling",
-        "post": "",
+        "post": "/cord-(covid-19-research-dataset)-topic-modeling",
         "id": "cord-19"
     }
     

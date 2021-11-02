@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
+     `@rafaelquintanilha/gatsby-transformer-ipynb`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

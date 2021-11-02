@@ -10,13 +10,16 @@
 
 
 #post-date {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .blog-post-header h2 {
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    font-size: 45px;
+    line-height: 45px;
 }
 .blog-post-header h3 {
     margin-top: 0;
@@ -47,6 +50,9 @@
     .blog-post-header {
         margin-left: 25px;
         margin-right: 25px;
+    }
+    .blog-post-header h2 {
+        font-size: 2rem;
     }
     .blog-post-content {
         padding-left: 20px;

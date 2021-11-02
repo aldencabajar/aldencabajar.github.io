@@ -5,42 +5,70 @@ import ProjectHeader from 'components/utils/header';
 import 'css/blog.css';
 import { graphql } from 'gatsby';
 
+
 export default function Blog({data}) {
-    const {posts} = data.blog
+    const {posts} = data.allMarkdownRemark
     useEffect(()=>{
-        console.log(posts)
+        console.log(posts.map((post)=>post.fields.slug))
+        console.log(
+          Object.entries(data).map(([k, node])=>{
+            return node 
+          })
+          // Object.entries(data)
+        )
     }, [posts])
     return(
-        <Layout>
-            <div className='section-body blog'>
-              <ProjectHeader title={'Blog'} subtitle={'Documented ramblings and learnings'} />
-                <div className='blog-body'>
-                    {posts.map(post=>{
-                        return(
-                        <BlogCard id={post.id} title={post.frontmatter.title}
-                        time={post.frontmatter.date} excerpt={post.excerpt}
-                        slug = {post.fields.slug} />
-                        )
-                    })}
-                </div>
-            </div>
-        </Layout>
+      <Layout>
+        <div className='section-body blog'>
+          <ProjectHeader title={'Blog'} subtitle={'Documented ramblings and learnings'} />
+          <div className='blog-body'>
+            {Object.entries(data).map(([k, node])=>{
+              return(
+                  node.posts.map(post=>{
+                    console.log(post.fields.slug)
+                    return(
+                      <BlogCard id={post.id} title={post.metadata.title}
+                      time={post.metadata.date} 
+                      excerpt={post.excerpt !== undefined ? post.excerpt : post.metadata.excerpt}
+                      slug = {post.fields.slug} />
+                    )
+                })
+              )
+            })
+            }
+          </div>
+        </div>
+      </Layout>
     )
 
 }
  export const query = graphql` 
   query MyQuery {
-    blog: allMarkdownRemark {
+    allMarkdownRemark {
       posts: nodes {
         fields {
           slug
         }
-        frontmatter {
+        metadata: frontmatter {
           date(fromNow: true)
           title
           author
         }
+        id
         excerpt
+      }
+    }
+    allJupyterNotebook {
+      posts: nodes {
+        fields {
+          slug
+        }
+        metadata {
+          author
+          title
+          excerpt
+          date(fromNow: true)
+        }
         id
       }
     }

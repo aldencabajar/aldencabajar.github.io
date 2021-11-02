@@ -25,7 +25,7 @@ class ProjectCell extends React.Component {
             {
             this.project.image !== "" &&
                 <HoverImage image={this.project.image} gh={this.project.gh_link} 
-                blog_link={this.project.blog_link}/>
+                blog_link={this.project.post}/>
             }
             </div>
         </div>

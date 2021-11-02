@@ -7,37 +7,46 @@ import 'css/blog-post.css'
 
 
 export default function BlogPost( {data} ) {
-    const post = data.markdownRemark
-    const blogDate = new Date(post.frontmatter.date).toISOString().split('T')[0]
+	console.log(data.markdownRemark)
+	const post = data.markdownRemark !== null ? data.markdownRemark : data.jupyterNotebook
+	console.log(post)
+	const blogDate = new Date(post.metadata.date).toISOString().split('T')[0]
 
-    useEffect(() =>{
-        console.log(blogDate)
-    })
+	useEffect(() =>{
+			console.log(blogDate)
+	})
 
 
 
-    return(
-        <Layout>
-            <div className = 'section-body blog-post'>
-                <header className ='blog-post-header'>
-                    <h2>{post.frontmatter.title}</h2>
-                    <h3 id='post-date'>{'posted on ' + blogDate}</h3> 
-                <Divider className='blog-post-divide'/>
-                </header>
-                <div className='blog-post-content' dangerouslySetInnerHTML={{__html: post.html}} />
-            </div>
-        </Layout>
-    )
+	return(
+		<Layout>
+			<div className = 'section-body blog-post'>
+				<header className ='blog-post-header'>
+						<h2>{post.metadata.title}</h2>
+						<h3 id='post-date'>{'posted on ' + blogDate}</h3> 
+				<Divider className='blog-post-divide'/>
+				</header>
+				<div className='blog-post-content' dangerouslySetInnerHTML={{__html: post.html}} />
+			</div>
+		</Layout>
+	)
 }
 
 export const query = graphql`
-    query BlogQuery($slug: String!) {
-        markdownRemark(fields: {slug: { eq: $slug}}) {
-            html
-            frontmatter {
-                title
-                date
-            }
-        }
-    }
+	query BlogQuery($slug: String!) {
+		markdownRemark(fields: {slug: { eq: $slug}}) {
+			html
+			metadata: frontmatter {
+				title
+				date
+			}
+		}
+		jupyterNotebook(fields: {slug: {eq: $slug}}) {
+			html
+			metadata {
+				title 
+				date
+			}
+		}
+	}
 `
