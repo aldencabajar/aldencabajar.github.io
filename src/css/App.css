@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&');
 .App {
   background-color: rgb(255, 255, 255);
   /* background-color: #f1faee; */
@@ -155,6 +156,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Cabin', 
     /* 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', */
     sans-serif;
+  letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
