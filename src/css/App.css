@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 .App {
   background-color: rgb(255, 255, 255);
   /* background-color: #f1faee; */
@@ -151,7 +152,7 @@
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+  font-family: -apple-system, BlinkMacSystemFont, 'Cabin', 
     /* 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', */
     sans-serif;
   -webkit-font-smoothing: antialiased;
