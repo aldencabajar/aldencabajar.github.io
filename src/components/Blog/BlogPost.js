@@ -19,7 +19,7 @@ export default function BlogPost( {data} ) {
 
 
 	return(
-		<Layout>
+	  <Layout>
 			<div className = 'section-body blog-post'>
 				<header className ='blog-post-header'>
 						<h2>{post.metadata.title}</h2>

@@ -14,11 +14,12 @@ class HoverImage extends React.Component {
             resized: false,
             CurrWindowSize: 0 
         }
-        this.ghlogo = "img/github-icon.png"
+        this.ghlogo = "/img/github-icon.png"
         this.blog = "img/blog-icon.png" 
         this.gh_link = String(this.props.gh)
         this.blog_link = String(this.props.blog_link)
         this.img_link = 'img/' + this.props.image
+        this.id = String(this.props.id)
         this.imageRef = React.createRef()
     }
 
@@ -92,7 +93,7 @@ class HoverImage extends React.Component {
                 ref={this.imageRef}
                 onLoad={this.GetDimensions}
                 style={this.state.styles} 
-                alt="tmp"/>
+                alt={this.id}/>
                 <div className="overlay" style={this.state.iconStyles}>
                     <a href={this.gh_link}> <img src={this.ghlogo}  className="ghlogo" alt="github-icon"/></a>
                     <a href={this.blog_link}> <img src={this.blog}  className="blog" alt="blog-icon"/></a>
