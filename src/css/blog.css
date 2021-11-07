@@ -24,6 +24,9 @@
     text-decoration: none;
 
 }
+.blog-link {
+  text-decoration: none;
+}
 
 .blog-card h2 {
     margin-bottom: 0px;

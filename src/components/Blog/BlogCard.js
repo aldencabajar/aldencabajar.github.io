@@ -24,7 +24,7 @@ function BlogCard(props) {
     }, [])
     return(
         <ContentBox>
-            <Link to={props.slug} className={classes.cardLink}>
+            <Link to={props.slug} className={'blog-link'}>
             <div className = {'blog-card'}>
                 <article key={props.id}>
                     <h2>{props.title}</h2>
