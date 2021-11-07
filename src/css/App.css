@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wdth@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 .App {
   background-color: rgb(255, 255, 255);
   /* background-color: #f1faee; */
@@ -16,6 +16,7 @@
 
 .section-header h1 {
   margin-bottom: 0;
+  letter-spacing: 2px;
 }
 
 .section-header h3  {
@@ -153,11 +154,9 @@
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Cabin', 
-    /* 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', */
-    sans-serif;
-  letter-spacing: 0.5px;
-  -webkit-font-smoothing: antialiased;
+  font-family:  'Cabin', sans-serif;
+  letter-spacing: 0.25px;
+  -webkit-font-sm: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
