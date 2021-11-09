@@ -1,5 +1,5 @@
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 
 export default function HoverImage(props) {
@@ -19,10 +19,12 @@ export default function HoverImage(props) {
       />
       <div className="overlay">
           <a href={githubLink} style={linkStyle}>
+            <StaticImage src="../../../static/img/github-icon.png" 
+            alt="github-icon" className="ghlogo" loading="lazy"/>
           </a>
-            <img src={ghlogo} className="ghlogo" alt="github-icon"/> 
           <a href={blogLink} style={linkStyle}>
-          <img src={blog}  className="bloglogo" alt="blog-icon"/>
+            <StaticImage src="../../../static/img/blog-icon.png" 
+            alt="blog-icon" className="bloglogo"/>
           </a>
       </div>
     </div>

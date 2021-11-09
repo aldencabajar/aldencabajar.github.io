@@ -77,8 +77,8 @@
 }
 .overlay .bloglogo {
     max-width: 102px;
-    padding-left:20px;
     transition: .1s;
+    margin-left: 20px;
 }
 .overlay .ghlogo:hover {
     max-width: 103px;
@@ -116,22 +116,20 @@
     .proj-cell img {
         margin-right: 0px;
     }
-    /* .overlay .ghlogo:hover {
-        max-width: 90px;
+    .overlay .ghlogo:hover {
+        max-width: 3.5rem;
         z-index: 1;
     }
 
     .overlay .bloglogo:hover {
-        max-width: 120px;
+        max-width: 4.5rem;
         z-index: 1;
-    } */
+    }
     .overlay .ghlogo {
         max-width: 3rem;
-        padding-right:5px
     }
     .overlay .bloglogo {
         max-width: 4rem;
-        padding-left:10px;
     }
 
 }

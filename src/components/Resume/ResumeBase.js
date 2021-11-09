@@ -9,7 +9,7 @@ export default class ResumeBase extends React.Component {
         this.divRef = React.createRef()
         this.headerStyleNorm ={
             position: 'sticky',
-            top: '75px',
+            top: '60px',
             zIndex: 3,
             backgroundColor: 'rgb(255, 255, 255)',
         }
@@ -36,7 +36,6 @@ export default class ResumeBase extends React.Component {
         } else {
             this.setState({headerStyle: this.headerStyleNorm})    
         }
-        console.log(this.divRef.current.offsetTop, this.state.headerStyle, isInView)
 
 
     }
