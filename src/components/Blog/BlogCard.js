@@ -19,9 +19,6 @@ const useStyles = makeStyles({
 
 function BlogCard(props) {
     const classes = useStyles()
-    useEffect(()=>{
-        console.log(props.slug)
-    }, [])
     return(
         <ContentBox>
             <Link to={props.slug} className={'blog-link'}>

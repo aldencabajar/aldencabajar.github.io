@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
+    'gatsby-transformer-json',
      `@rafaelquintanilha/gatsby-transformer-ipynb`,
     {
       resolve: "gatsby-source-filesystem",
@@ -27,6 +28,20 @@ module.exports = {
       options: {
         name: 'blog',
         path: './content/posts/',
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'jsonData',
+        path: './data/',
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'images',
+        path: './static/img',
       }
     },
     {

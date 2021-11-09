@@ -1,7 +1,7 @@
 
 .project-container {
     display:flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: flex-start;
 
 }
@@ -19,9 +19,9 @@
 }
 
 .img-container {
-  display: inline;
+  position: relative;
+  max-width: 500px;
 }
-
 
 .proj-cell h3 {
     color:rgb(0, 0, 0);
@@ -47,28 +47,45 @@
     /* margin-right: 50%; */
 }
 
-.proj-cell img {
-    /* margin-top: -100px; */
-    max-width:80%;
-    }
+.img-container-img-wrapper {
+  object-fit: cover;
+}
+
+.img-container:hover .img-container-img-wrapper{
+  transition: 0.5s;
+  opacity: 0.1;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay {
+  position: absolute;
+  max-width: 80%;
+  visibility: hidden;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .overlay .ghlogo {
-    transition: all .1s ease-in;
+    transition: .1s; 
     max-width:75px;
-    padding-right: 20px;
-
 }
-.overlay .blog {
+.overlay .bloglogo {
     max-width: 102px;
     padding-left:20px;
-    transition: all .1s ease-in;
+    transition: .1s;
 }
 .overlay .ghlogo:hover {
     max-width: 103px;
     z-index: 1;
 }
 
-.overlay .blog:hover {
+.overlay .bloglogo:hover {
     max-width: 130px;
     z-index: 1;
 }
@@ -99,12 +116,21 @@
     .proj-cell img {
         margin-right: 0px;
     }
+    /* .overlay .ghlogo:hover {
+        max-width: 90px;
+        z-index: 1;
+    }
+
+    .overlay .bloglogo:hover {
+        max-width: 120px;
+        z-index: 1;
+    } */
     .overlay .ghlogo {
-        max-width: 50px;
+        max-width: 3rem;
         padding-right:5px
     }
-    .overlay .blog {
-        max-width: 67px;
+    .overlay .bloglogo {
+        max-width: 4rem;
         padding-left:10px;
     }
 
