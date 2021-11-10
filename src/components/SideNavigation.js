@@ -64,8 +64,9 @@ class Navigation extends React.Component {
             </header>
             <ul>
                 {this.data.map((item, i)=>{
+                  console.log(typeof(item.id))
                     return(
-                        <AnchorLink to={this.route + "#" + item.id}>
+                        <AnchorLink to={this.route + "#" + String(item.id)}>
                             <li style={this.state.listItemStyles[i]}>{item.title}</li>
                         </AnchorLink>
                     )

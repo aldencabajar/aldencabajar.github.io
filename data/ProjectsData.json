@@ -7,7 +7,7 @@
      "description": "Scraped the internet for suitable Cebuano language corpora. Planning to fit a transformer model to create a language model." , 
      "gh_link": "https://github.com/aldencabajar/cebuano-language-transformers",
      "post": "",
-     "id":"ceb-transformers"
+     "tag":"ceb-transformers"
 
     },
 
@@ -19,7 +19,7 @@
      "description": "Implemented an app using the YOLO V3 algorithm to detect cars from traffic data.", 
      "gh_link": "https://github.com/aldencabajar/traffic_flow_counter",
      "post": "",
-     "id": "trfc-flow"
+     "tag": "trfc-flow"
 
     },
 
@@ -31,7 +31,7 @@
         "description": "Used the CORD-19 corpus to extract useful topics out of it. Used Non-negative Matrix Factorization.", 
         "gh_link": "https://github.com/aldencabajar/cord-19-topic-modeling",
         "post": "/cord-(covid-19-research-dataset)-topic-modeling",
-        "id": "cord-19"
+        "tag": "cord-19"
     }
     
 ]

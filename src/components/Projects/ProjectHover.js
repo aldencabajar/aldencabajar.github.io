@@ -3,11 +3,9 @@ import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 
 export default function HoverImage(props) {
-  const ghlogo =  "img/github-icon.png"
-  const blog =  "img/blog-icon.png"
   const githubLink = String(props.gh)
   const blogLink = String(props.blog_link)
-  const id = String(props.id)
+  const id = String(props.tag)
 
   const linkStyle = {'textDecoration': 'none'}
 

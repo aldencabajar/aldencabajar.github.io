@@ -9,7 +9,7 @@ export default class ResumeBase extends React.Component {
         this.divRef = React.createRef()
         this.headerStyleNorm ={
             position: 'sticky',
-            top: '60px',
+            top: '50px',
             zIndex: 3,
             backgroundColor: 'rgb(255, 255, 255)',
         }

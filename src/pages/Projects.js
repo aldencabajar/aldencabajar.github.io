@@ -16,9 +16,12 @@ function ProjectCell(props) {
   const project = props.project
   const image = getImage(project.image)
 
+  //rename tag key to id due to limitations in using gatsby-transformer-json 
+  props.project['id'] = props.project['tag']
+
   return(
   <div className="proj-cell">
-      <span id={project.id}> &nbsp; </span>
+      <span id={props.project.id}> &nbsp; </span>
       <div className="body">
           <h3 ref={props.inputRef}>{project.title}</h3>
           <h5>{project.sub}</h5>
@@ -107,7 +110,7 @@ export const query = graphql`
       description
       gh_link
       post
-      id
+      tag 
       title
       image {
         childImageSharp {
