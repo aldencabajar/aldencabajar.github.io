@@ -1,7 +1,6 @@
 const path = require("path");
 
 module.exports = {
-  pathPrefix: '/my-personal-website',
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "my-website-gatsby",
