@@ -2,8 +2,11 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "my-website-gatsby",
+    siteUrl: `https://aldencabajar.github.io`,
+    title: `Alden's Web Nook`,
+    description: `Documenting thoughts and ideas in data and software.`,
+    googleSiteVerification: `lpK5zQ6HK8iJqvaamzOiAPCLMvQwZynlFG1vMLSSeVs`
+
   },
   plugins: [
     "gatsby-plugin-react-helmet",
