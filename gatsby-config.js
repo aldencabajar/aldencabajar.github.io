@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://aldencabajar.github.io`,
     title: `Alden's Web Nook`,
     description: `Documenting thoughts and ideas in data and software.`,
-    googleSiteVerification: `lpK5zQ6HK8iJqvaamzOiAPCLMvQwZynlFG1vMLSSeVs`
+    googleSiteVerification: `vYoXiQ_tbFXp-IaPGvYncMf-SuM5h2FfqiK5oKNhqGo`
 
   },
   plugins: [
