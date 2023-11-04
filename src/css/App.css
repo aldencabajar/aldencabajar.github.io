@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wdth@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 .App {
   background-color: rgb(255, 255, 255);
   /* background-color: #f1faee; */
@@ -16,7 +15,6 @@
 
 .section-header h1 {
   margin-bottom: 0;
-  letter-spacing: 2px;
 }
 
 .section-header h3  {
@@ -150,14 +148,12 @@
   .home  {
     margin-right: 0px;
     margin-left: 15px;
+    line-height: 30px;
   }
 }
 body {
   margin: 0;
-  font-family:  'Cabin', sans-serif;
-  letter-spacing: 0.25px;
-  -webkit-font-sm: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:  'Karla', sans-serif;
 }
 
  

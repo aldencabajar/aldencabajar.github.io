@@ -46,7 +46,7 @@ const Home=() => {
         <PageHeader 
         className='section-header header-home'
         title={'Hello.'} 
-        subtitle={'& Welcome to my page!'} />
+        subtitle={'& Welcome to my page! 👋'} />
 
         <div className='home-content'>
           <p>I am <b id='bold-home'>Alden Cabajar</b>, currently working as a <b id='bold-home'> Data Scientist </b> for a healthcare company. This page serves as a portfolio for everything I have worked on so far. 

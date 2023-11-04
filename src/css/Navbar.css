@@ -4,7 +4,7 @@
     width: 30px;
     height: 15px;
     right: 100px;
-    top: 25px;
+    top: 20px;
   }
 
 .bm-cross-button {
@@ -41,6 +41,13 @@ transition: all .2s ease-in;
 display: inline-block;
 }
 
+.divider {
+    border-left: 2px solid #f3f3f569;
+    height: 25px;
+    margin-left: 15px;
+    padding-right: 15px;
+}
+
 .Navbar {
     text-align: center;
     box-shadow: 0 3px 10px 3px rgba(0,0,0,.2);
@@ -49,23 +56,24 @@ display: inline-block;
     /* background-image: linear-gradient(to right, #757f9a, #d7dde8); */
     display: flex;
     color: white;
-    padding-left: 10%;
     padding-top: 10px;
-    height: 45px;
+    padding-bottom: 5px;
+    height: 35px;
     position: sticky;
+    align-items: center;
+    padding-left: 20%;
     z-index: 5;
     top: 0;
 }
 
 .navHeader {
-    align-items: center;
     transition: all .2s ease-in;
 }
 
-.navHeader h1 {
-    margin-top: 0px;
+.navHeader h2 {
+    display: flex;
+    align-items: center;
     font-weight: 100;
-    letter-spacing: 1.5px;
 }
 
 .navHeader:hover {
@@ -73,16 +81,18 @@ display: inline-block;
 }
 
 .nav-list {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 35%;
+    padding-left: 0%;
+    width: 20rem;
     list-style: none;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .nav-list li {
     transition: all .1s ease-in;
+    font-weight: lighter;
 }
 
 .nav-list li:hover {
