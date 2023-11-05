@@ -20,7 +20,8 @@ export default function Layout({ children }) {
     menuSetState(state.isOpen);
   };
 
-  const { description, siteUrl, title, googleSiteVerification } = useSiteMetadata();
+  const { description, siteUrl, title, googleSiteVerification } =
+    useSiteMetadata();
   return (
     <div className="App" id="outer-container" style={styleOther}>
       <Helmet>
@@ -28,7 +29,10 @@ export default function Layout({ children }) {
         <html lang="en" />
         <title> {title}</title>
         <meta name="description" content={description} />
-        <meta name="google-site-verification" content={googleSiteVerification} />
+        <meta
+          name="google-site-verification"
+          content={googleSiteVerification}
+        />
         <link rel="canonical" href={siteUrl} />
       </Helmet>
       <Menu
